@@ -10,7 +10,17 @@ class _0198_house_robber
 {
 public:
 	int rob(vector<int>& nums) {
+		int rob1 = 0;
+		int	rob2 = 0;
 
+		for (int i = 0; i < nums.size(); ++i)
+		{
+			int newRob = max(nums[i] + rob1, rob2);
+			rob1 = rob2;
+			rob2 = newRob;
+		}
+			
+		return rob2;
 	}
 
 	void do_test(_0198_house_robber* sol)
@@ -32,5 +42,10 @@ public:
 		Explanation : Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (money = 1).
 		Total amount you can rob = 2 + 9 + 1 = 12.
 		*/
+
+		vector<int> nums3 = { 100, 1, 1, 1, 1, 100 };
+		int ret3 = sol->rob(nums3);
+		cout << ret3 << endl;
+		// Output : 201
 	}
 };
