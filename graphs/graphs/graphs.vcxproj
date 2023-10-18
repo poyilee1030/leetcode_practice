@@ -140,7 +140,8 @@
     <ClInclude Include="_0417_pacific_atlantic_water_flow_dfs.h" />
     <ClInclude Include="_0695_max_area_of_island_bfs.h" />
     <ClInclude Include="_0695_max_area_of_island_dfs.h" />
-    <ClInclude Include="_0994_rotting_oranges_dfs.h" />
+    <ClInclude Include="_0994_rotting_oranges.h" />
+    <ClInclude Include="_0207_course_schedule.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
