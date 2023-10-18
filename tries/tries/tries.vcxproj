@@ -42,7 +42,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -130,6 +130,7 @@
     <ClCompile Include="tries.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="define.h" />
     <ClInclude Include="_0208_implement_trie_prefix_tree.h" />
     <ClInclude Include="_0211_design_add_and_search_words_data_structure.h" />
     <ClInclude Include="_0212_word_search_ii.h" />

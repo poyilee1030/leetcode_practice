@@ -2,10 +2,14 @@
 //
 
 #include "_0208_implement_trie_prefix_tree.h"
+#include "_0211_design_add_and_search_words_data_structure.h"
+#include "_0212_word_search_ii.h"
 
 int main()
 {
-    _0208_implement_trie_prefix_tree sol;
+    //_0208_implement_trie_prefix_tree sol;
+    //_0211_design_add_and_search_words_data_structure sol;
+    _0212_word_search_ii sol;
 
     sol.do_test(&sol);
 }
