@@ -8,8 +8,8 @@
 int main()
 {
     //_0208_implement_trie_prefix_tree sol;
-    //_0211_design_add_and_search_words_data_structure sol;
-    _0212_word_search_ii sol;
+    _0211_design_add_and_search_words_data_structure sol;
+    //_0212_word_search_ii sol;
 
     sol.do_test(&sol);
 }

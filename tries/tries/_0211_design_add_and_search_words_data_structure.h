@@ -32,24 +32,29 @@ public:
 
     bool search(string word) {
         TrieNode* node = root;
-        return searchInNode(word, 0, node);
+        return dfs(word, 0, node);
     }
 
-    bool searchInNode(string& word, int i, TrieNode* node) {
+    bool dfs(string& word, int i, TrieNode* node) {
         if (node == NULL) {
             return false;
         }
+        
         if (i == word.size()) {
             return node->isWord;
         }
-        if (word[i] != '.') {
-            return searchInNode(word, i + 1, node->children[word[i] - 'a']);
-        }
-        for (int j = 0; j < 26; j++) {
-            if (searchInNode(word, i + 1, node->children[j])) {
-                return true;
+
+        if (word[i] == '.') {
+            for (int j = 0; j < 26; j++) {
+                if (dfs(word, i + 1, node->children[j])) {
+                    return true;
+                }
             }
         }
+        else {
+            return dfs(word, i + 1, node->children[word[i] - 'a']);
+        }
+        
         return false;
     }
 
