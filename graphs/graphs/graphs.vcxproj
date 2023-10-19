@@ -135,7 +135,7 @@
     <ClInclude Include="_0133_clone_graph.h" />
     <ClInclude Include="_0200_number_of_islands_bfs.h" />
     <ClInclude Include="_0200_number_of_islands_dfs.h" />
-    <ClInclude Include="_0286_walls_and_gates_dfs.h" />
+    <ClInclude Include="_0286_walls_and_gates.h" />
     <ClInclude Include="_0417_pacific_atlantic_water_flow_bfs.h" />
     <ClInclude Include="_0417_pacific_atlantic_water_flow_dfs.h" />
     <ClInclude Include="_0695_max_area_of_island_bfs.h" />
