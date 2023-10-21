@@ -2,6 +2,8 @@
 
 #include <iostream>
 #include <vector>
+#include <unordered_map>
+#include <unordered_set>
 
 using namespace std;
 
@@ -10,8 +12,40 @@ class _0207_course_schedule
 {
 public:
 	bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
+        // map each course to prereq list
+        unordered_map<int, vector<int>> preMap;
+        for (int i = 0; i < prerequisites.size(); i++) {
+            preMap[prerequisites[i][0]].push_back(prerequisites[i][1]);
+        }
+        // all courses along current DFS path
+        unordered_set<int> visited;
 
-	}
+        for (int course = 0; course < numCourses; course++) {
+            if (!dfs(course, preMap, visited)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    bool dfs(int course, unordered_map<int, vector<int>>& preMap, unordered_set<int>& visited) {
+        if (visited.find(course) != visited.end()) {
+            return false;
+        }
+        if (preMap[course].empty()) {
+            return true;
+        }
+        visited.insert(course);
+        for (int i = 0; i < preMap[course].size(); i++) {
+            int pre = preMap[course][i];
+            if (!dfs(pre, preMap, visited)) {
+                return false;
+            }
+        }
+        visited.erase(course);
+        preMap[course].clear();
+        return true;
+    }
 
 	void do_test(_0207_course_schedule* sol)
 	{
