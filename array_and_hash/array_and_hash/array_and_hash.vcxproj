@@ -143,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="_0001_two_sum.h" />
+    <ClInclude Include="_0014_longest_common_prefix.h" />
     <ClInclude Include="_0036_valid_sudoku.h" />
     <ClInclude Include="_0049_group_anagrams.h" />
     <ClInclude Include="_0058_length_of_last_word.h" />

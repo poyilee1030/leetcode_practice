@@ -5,6 +5,7 @@
 
 using namespace std;
 
+
 class _0058_length_of_last_word
 {
 public:
