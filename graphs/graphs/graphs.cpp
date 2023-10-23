@@ -9,6 +9,7 @@
 #include "_0286_walls_and_gates.h"
 #include "_0417_pacific_atlantic_water_flow_bfs.h"
 #include "_0417_pacific_atlantic_water_flow_dfs.h"
+#include "_0684_redundant_connection.h"
 #include "_0695_max_area_of_island_bfs.h"
 #include "_0695_max_area_of_island_dfs.h"
 #include "_0994_rotting_oranges.h"
@@ -20,10 +21,11 @@ int main()
     //_0200_number_of_islands_bfs sol;
     //_0200_number_of_islands_dfs sol;
     //_0207_course_schedule sol;
-    _0210_course_schedule_ii sol;
+    //_0210_course_schedule_ii sol;
     //_0286_walls_and_gates sol;
     //_0417_pacific_atlantic_water_flow_bfs sol;
     //_0417_pacific_atlantic_water_flow_dfs sol;
+    _0684_redundant_connection sol;
     //_0695_max_area_of_island_bfs sol;
     //_0695_max_area_of_island_dfs sol;
     //_0994_rotting_oranges sol;

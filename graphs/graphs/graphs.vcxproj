@@ -139,6 +139,7 @@
     <ClInclude Include="_0286_walls_and_gates.h" />
     <ClInclude Include="_0417_pacific_atlantic_water_flow_bfs.h" />
     <ClInclude Include="_0417_pacific_atlantic_water_flow_dfs.h" />
+    <ClInclude Include="_0684_redundant_connection.h" />
     <ClInclude Include="_0695_max_area_of_island_bfs.h" />
     <ClInclude Include="_0695_max_area_of_island_dfs.h" />
     <ClInclude Include="_0994_rotting_oranges.h" />
