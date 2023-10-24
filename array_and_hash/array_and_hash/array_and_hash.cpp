@@ -3,6 +3,7 @@
 
 #include "_0001_two_sum.h"
 #include "_0014_longest_common_prefix.h"
+#include "_0027_remove_element.h"
 #include "_0036_valid_sudoku.h"
 #include "_0049_group_anagrams.h"
 #include "_0058_length_of_last_word.h"
@@ -23,10 +24,11 @@ int main()
 
     //_0001_two_sum sol;
     //_0014_longest_common_prefix sol;
+    _0027_remove_element sol;
     //_0036_valid_sudoku sol;
     //_0049_group_anagrams sol;
     //_0058_length_of_last_word sol;
-    _0118_pascals_triangle sol;
+    //_0118_pascals_triangle sol;
     //_0128_longest_consecutive_sequence sol;
     //_0217_contains_duplicate sol;
     //_0238_product_of_array_except_self sol;
