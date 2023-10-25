@@ -156,6 +156,7 @@
     <ClInclude Include="_0271_encode_and_decode_strings.h" />
     <ClInclude Include="_0347_top_k_frequent_elements.h" />
     <ClInclude Include="_0392_is_subsequence.h" />
+    <ClInclude Include="_0929_unique_email_addresses.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

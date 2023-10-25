@@ -15,6 +15,7 @@
 #include "_0271_encode_and_decode_strings.h"
 #include "_0347_top_k_frequent_elements.h"
 #include "_0392_is_subsequence.h"
+#include "_0929_unique_email_addresses.h"
 
 
 int main()
@@ -24,7 +25,7 @@ int main()
 
     //_0001_two_sum sol;
     //_0014_longest_common_prefix sol;
-    _0027_remove_element sol;
+    //_0027_remove_element sol;
     //_0036_valid_sudoku sol;
     //_0049_group_anagrams sol;
     //_0058_length_of_last_word sol;
@@ -36,6 +37,7 @@ int main()
     //_0271_encode_and_decode_strings sol;
     //_0347_top_k_frequent_elements sol;
     //_0392_is_subsequence sol;
+    _0929_unique_email_addresses sol;
 
     sol.do_test(&sol);
 }
