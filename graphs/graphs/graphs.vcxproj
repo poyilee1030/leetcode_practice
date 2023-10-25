@@ -131,12 +131,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="define.h" />
+    <ClInclude Include="_0127_word_ladder.h" />
     <ClInclude Include="_0130_surrounded_regions_dfs.h" />
     <ClInclude Include="_0133_clone_graph.h" />
     <ClInclude Include="_0200_number_of_islands_bfs.h" />
     <ClInclude Include="_0200_number_of_islands_dfs.h" />
     <ClInclude Include="_0210_course_schedule_ii.h" />
+    <ClInclude Include="_0261_graph_valid_tree.h" />
     <ClInclude Include="_0286_walls_and_gates.h" />
+    <ClInclude Include="_0323_number_of_connected_components_in_an_undirected_graph.h" />
     <ClInclude Include="_0417_pacific_atlantic_water_flow_bfs.h" />
     <ClInclude Include="_0417_pacific_atlantic_water_flow_dfs.h" />
     <ClInclude Include="_0684_redundant_connection.h" />
