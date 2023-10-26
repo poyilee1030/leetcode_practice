@@ -150,6 +150,7 @@
     <ClInclude Include="_0058_length_of_last_word.h" />
     <ClInclude Include="_0118_pascals_triangle.h" />
     <ClInclude Include="_0128_longest_consecutive_sequence.h" />
+    <ClInclude Include="_0205_isomorphic_strings.h" />
     <ClInclude Include="_0217_contains_duplicate.h" />
     <ClInclude Include="_0238_product_of_array_except_self.h" />
     <ClInclude Include="_0242_valid_anagram.h" />
