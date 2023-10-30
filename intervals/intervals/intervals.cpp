@@ -10,8 +10,8 @@
 
 int main()
 {
-    //_0056_merge_intervals sol;
-    _0057_insert_interval sol;
+    _0056_merge_intervals sol;
+    //_0057_insert_interval sol;
     //_0252_meeting_rooms sol;
     //_0253_meeting_rooms_ii sol;
     //_0435_non_overlapping_intervals sol;

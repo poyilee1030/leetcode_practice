@@ -6,6 +6,15 @@
 
 using namespace std;
 
+/*
+	Given an array of intervals, merge all overlapping intervals
+	Ex. intervals = [[1,3],[2,6],[8,10],[15,18]] -> [[1,6],[8,10],[15,18]]
+
+	Sort by earliest start time, merge overlapping intervals (take longer end time)
+
+	Time: O(n log n)
+	Space: O(n)
+*/
 
 class _0056_merge_intervals
 {
@@ -20,22 +29,20 @@ public:
 			return a[0] < b[0];
 			});
 
-		vector<vector<int>> result;
+		vector<vector<int>> output = { intervals[0] };
 
-		int i = 0;
-		while (i < n - 1) {
-			if (intervals[i][1] >= intervals[i + 1][0]) {
-				intervals[i + 1][0] = intervals[i][0];
-				intervals[i + 1][1] = max(intervals[i][1], intervals[i + 1][1]);
-			}
-			else {
-				result.push_back(intervals[i]);
-			}
-			i++;
+		for (int i = 1; i < intervals.size(); i++) {
+			int lastEnd = output[output.size() - 1][1];
+
+			int start = intervals[i][0];
+			int end = intervals[i][1];
+			if (start <= lastEnd)
+				output[output.size() - 1][1] = max(lastEnd, end);
+			else
+				output.push_back({ start, end });
 		}
-		result.push_back(intervals[i]);
 
-		return result;
+		return output;
 	}
 
 	void do_test(_0056_merge_intervals* sol) {

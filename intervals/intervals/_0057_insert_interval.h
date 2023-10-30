@@ -25,15 +25,16 @@ public:
 		int n = intervals.size();
 		for (int i = 0; i < n; i++) {
 			// Case 1: Non overlapping interval
+			// If new interval is after the current interval
+			if (intervals[i][1] < newStart) {
+				ans.push_back(intervals[i]);
+			}
+			// Case 1 上下兩個 if 條件可以交換不影響
 			// If new interval is before the current interval
-			if (intervals[i][0] > newEnd) {
+			else if (intervals[i][0] > newEnd) {
 				ans.push_back(newInterval);
 				copy(intervals.begin() + i, intervals.end(), back_inserter(ans));
 				return ans;
-			}
-			// If new interval is after the current interval
-			else if (intervals[i][1] < newStart) {
-				ans.push_back(intervals[i]);
 			}
 			// Case 2: Overlapping interval
 			else {
