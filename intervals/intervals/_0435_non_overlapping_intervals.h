@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -10,7 +11,29 @@ class _0435_non_overlapping_intervals
 {
 public:
 	int eraseOverlapIntervals(vector<vector<int>>& intervals) {
-		return 0;
+		int n = intervals.size();
+		if (n == 1) {
+			return 0;
+		}
+
+		sort(intervals.begin(), intervals.end(), [](const auto& a, const auto& b) {
+			return a[0] < b[0];
+			});
+
+		int result = 0;
+		int lastEnd = intervals[0][1];
+		for (int i = 1; i < intervals.size(); i++) {
+			int start = intervals[i][0];
+			int end = intervals[i][1];
+			if (start >= lastEnd) {
+				lastEnd = end;
+			}
+			else {
+				result += 1;
+				lastEnd = min(end, lastEnd);
+			}
+		}
+		return result;
 	}
 
 	void do_test(_0435_non_overlapping_intervals* sol) {
