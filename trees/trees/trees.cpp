@@ -11,6 +11,7 @@
 #include "_0226_invert_binary_tree.h"
 #include "_0230_kth_smallest_element_in_a_bst.h"
 #include "_0235_lowest_common_ancestor_of_a_binary_search_tree.h"
+#include "_0501_find_mode_in_binary_search_tree.h"
 #include "_0543_diameter_of_binary_tree.h"
 #include "_0572_subtree_of_another_tree.h"
 #include "_1448_count_good_nodes_in_binary_tree.h"
@@ -19,7 +20,7 @@
 int main()
 {
     //_0098_validate_binary_search_tree sol;
-    _0105_construct_binary_tree_from_preorder_and_inorder_traversal sol;
+    //_0105_construct_binary_tree_from_preorder_and_inorder_traversal sol;
     //_0100_same_tree sol;
     //_0102_binary_tree_level_order_traversal sol;
     //_0104_maximum_depth_of_binary_tree sol;
@@ -28,6 +29,7 @@ int main()
     //_0226_invert_binary_tree sol;
     //_0230_kth_smallest_element_in_a_bst sol;
     //_0235_lowest_common_ancestor_of_a_binary_search_tree sol;
+    _0501_find_mode_in_binary_search_tree sol;
     //_0543_diameter_of_binary_tree sol;
     //_0572_subtree_of_another_tree sol;
     //_1448_count_good_nodes_in_binary_tree sol;
