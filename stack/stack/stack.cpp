@@ -8,16 +8,18 @@
 #include "_0155_min_stack.h"
 #include "_0739_daily_temperatures.h"
 #include "_0853_car_fleet.h"
+#include "_1441_build_an_array_with_stack_operations.h"
 
 int main()
 {
     //_0020_valid_parentheses sol;
     //_0022_generate_parentheses sol;
-    _0084_largest_rectangle_in_histogram sol;
+    //_0084_largest_rectangle_in_histogram sol;
     //_0150_evaluate_reverse_polish_notation sol;
     //_0155_min_stack sol;
     //_0739_daily_temperatures sol;
     //_0853_car_fleet sol;
+    _1441_build_an_array_with_stack_operations sol;
 
     sol.do_test(&sol);
 }

@@ -130,6 +130,7 @@
     <ClCompile Include="stack.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="_1441_build_an_array_with_stack_operations.h" />
     <ClInclude Include="_0084_largest_rectangle_in_histogram.h" />
     <ClInclude Include="_0739_daily_temperatures.h" />
     <ClInclude Include="_0020_valid_parentheses.h" />
