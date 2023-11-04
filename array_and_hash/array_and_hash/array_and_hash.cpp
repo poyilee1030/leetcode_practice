@@ -17,6 +17,7 @@
 #include "_0347_top_k_frequent_elements.h"
 #include "_0392_is_subsequence.h"
 #include "_0929_unique_email_addresses.h"
+#include "_1503_last_moment_before_all_ants_fall_out_of_a_plank.h"
 
 
 int main()
@@ -32,7 +33,7 @@ int main()
     //_0058_length_of_last_word sol;
     //_0118_pascals_triangle sol;
     //_0128_longest_consecutive_sequence sol;
-    _0205_isomorphic_strings sol;
+    //_0205_isomorphic_strings sol;
     //_0217_contains_duplicate sol;
     //_0238_product_of_array_except_self sol;
     //_0242_valid_anagram sol;
@@ -40,6 +41,7 @@ int main()
     //_0347_top_k_frequent_elements sol;
     //_0392_is_subsequence sol;
     //_0929_unique_email_addresses sol;
+    _1503_last_moment_before_all_ants_fall_out_of_a_plank sol;
 
     sol.do_test(&sol);
 }

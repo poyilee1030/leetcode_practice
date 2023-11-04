@@ -158,6 +158,7 @@
     <ClInclude Include="_0347_top_k_frequent_elements.h" />
     <ClInclude Include="_0392_is_subsequence.h" />
     <ClInclude Include="_0929_unique_email_addresses.h" />
+    <ClInclude Include="_1503_last_moment_before_all_ants_fall_out_of_a_plank.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
