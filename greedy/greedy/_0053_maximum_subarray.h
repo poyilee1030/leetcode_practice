@@ -5,12 +5,31 @@
 
 using namespace std;
 
+/*
+	Given int array, find contiguous subarray w/ max sum
+	Ex. nums = [-2,1,-3,4,-1,2,1,-5,4] -> 6, [4,-1,2,1]
+
+	At each point, determine if it's better to add to curr sum or start over
+
+	Time: O(n)
+	Space: O(1)
+*/
 
 class _0053_maximum_subarray
 {
 public:
 	int maxSubArray(vector<int>& nums) {
-		return 0;
+		int res = nums[0];
+
+		int total = 0;
+		for (int i = 0; i < nums.size(); i++) {
+			total += nums[i];
+			res = max(res, total);
+			if (total < 0)
+				total = 0;
+		}
+
+		return res;
 	}
 
 	void do_test(_0053_maximum_subarray* sol) {

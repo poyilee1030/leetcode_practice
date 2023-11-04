@@ -10,7 +10,30 @@ class _0134_gas_station
 {
 public:
 	int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {
-		return 0;
+		int n = gas.size();
+
+		int totalGas = 0;
+		int totalCost = 0;
+		for (int i = 0; i < n; i++) {
+			totalGas += gas[i];
+			totalCost += cost[i];
+		}
+		if (totalGas < totalCost) {
+			return -1;
+		}
+
+		int total = 0;
+		int result = 0;
+
+		for (int i = 0; i < n; i++) {
+			total += gas[i] - cost[i];
+			if (total < 0) {
+				total = 0;
+				result = i + 1;
+			}
+		}
+
+		return result;
 	}
 
 	void do_test(_0134_gas_station* sol) {
@@ -30,7 +53,6 @@ public:
 		Therefore, return 3 as the starting index.
 		*/
 		
-		
 		vector<int> gas2 = { 2, 3, 4 };
 		vector<int> cost2 = { 3, 4, 3 };
 		int ret2 = sol->canCompleteCircuit(gas2, cost2);
@@ -45,6 +67,5 @@ public:
 		You cannot travel back to station 2, as it requires 4 unit of gas but you only have 3.
 		Therefore, you can't travel around the circuit once no matter where you start.
 		*/
-
 	}
 };
