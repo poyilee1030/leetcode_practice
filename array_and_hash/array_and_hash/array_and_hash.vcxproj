@@ -159,6 +159,7 @@
     <ClInclude Include="_0392_is_subsequence.h" />
     <ClInclude Include="_0929_unique_email_addresses.h" />
     <ClInclude Include="_1503_last_moment_before_all_ants_fall_out_of_a_plank.h" />
+    <ClInclude Include="_1535_find_the_winner_of_an_array_game.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
