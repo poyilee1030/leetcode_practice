@@ -137,6 +137,7 @@
     <ClInclude Include="_0703_kth_largest_element_in_a_stream.h" />
     <ClInclude Include="_0973_k_closest_points_to_origin.h" />
     <ClInclude Include="_1046_last_stone_weight.h" />
+    <ClInclude Include="_1845_seat_reservation_manager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
