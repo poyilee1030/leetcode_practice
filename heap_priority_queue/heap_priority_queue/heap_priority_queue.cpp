@@ -9,6 +9,7 @@
 #include "_0973_k_closest_points_to_origin.h"
 #include "_1046_last_stone_weight.h"
 #include "_1845_seat_reservation_manager.h"
+#include "_1921_eliminate_maximum_number_of_monsters.h"
 
 
 int main()
@@ -21,6 +22,7 @@ int main()
     //_0973_k_closest_points_to_origin sol;
     //_1046_last_stone_weight sol;
     _1845_seat_reservation_manager sol;
+    //_1921_eliminate_maximum_number_of_monsters sol;
 
     sol.do_test(&sol);
 }
