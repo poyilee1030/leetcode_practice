@@ -37,5 +37,12 @@ public:
 		to reach cell(7, 3) by going through the cells depicted in the picture above.
 		Hence, we cannot reach cell(7, 3) at the third second.
 		*/
+
+		//Input : sx = 1, sy = 2, fx = 1, fy = 2, t = 1
+		bool ret3 = sol->isReachableAtTime(1, 2, 1, 2, 1);
+		cout << ret3 << endl;
+		/*
+		Output : false
+		*/
 	}
 };
