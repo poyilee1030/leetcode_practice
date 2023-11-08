@@ -138,6 +138,7 @@
     <ClInclude Include="_0073_set_matrix_zeroes.h" />
     <ClInclude Include="_0202_happy_number.h" />
     <ClInclude Include="_2013_detect_squares.h" />
+    <ClInclude Include="_2849_determine_if_a_cell_is_reachable_at_a_given_time.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
