@@ -19,6 +19,7 @@
 #include "_0929_unique_email_addresses.h"
 #include "_1503_last_moment_before_all_ants_fall_out_of_a_plank.h"
 #include "_1535_find_the_winner_of_an_array_game.h"
+#include "_1759_count_number_of_homogenous_substrings.h"
 
 
 int main()
@@ -43,7 +44,8 @@ int main()
     //_0392_is_subsequence sol;
     //_0929_unique_email_addresses sol;
     //_1503_last_moment_before_all_ants_fall_out_of_a_plank sol;
-    _1535_find_the_winner_of_an_array_game sol;
+    //_1535_find_the_winner_of_an_array_game sol;
+    _1759_count_number_of_homogenous_substrings sol;
 
     sol.do_test(&sol);
 }
