@@ -147,6 +147,7 @@
     <ClInclude Include="_0695_max_area_of_island_dfs.h" />
     <ClInclude Include="_0994_rotting_oranges.h" />
     <ClInclude Include="_0207_course_schedule.h" />
+    <ClInclude Include="_1743_restore_the_array_from_adjacent_pairs.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

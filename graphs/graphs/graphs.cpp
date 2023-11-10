@@ -16,11 +16,12 @@
 #include "_0695_max_area_of_island_bfs.h"
 #include "_0695_max_area_of_island_dfs.h"
 #include "_0994_rotting_oranges.h"
+#include "_1743_restore_the_array_from_adjacent_pairs.h"
 
 
 int main()
 {
-    _0127_word_ladder sol;
+    //_0127_word_ladder sol;
     //_0130_surrounded_regions_dfs sol;
     //_0200_number_of_islands_bfs sol;
     //_0200_number_of_islands_dfs sol;
@@ -35,6 +36,7 @@ int main()
     //_0695_max_area_of_island_bfs sol;
     //_0695_max_area_of_island_dfs sol;
     //_0994_rotting_oranges sol;
+    _1743_restore_the_array_from_adjacent_pairs sol;
 
     sol.do_test(&sol);
 }
