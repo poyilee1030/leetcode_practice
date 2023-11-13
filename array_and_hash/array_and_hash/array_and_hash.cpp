@@ -20,6 +20,7 @@
 #include "_1503_last_moment_before_all_ants_fall_out_of_a_plank.h"
 #include "_1535_find_the_winner_of_an_array_game.h"
 #include "_1759_count_number_of_homogenous_substrings.h"
+#include "_2785_sort_vowels_in_a_string.h"
 
 
 int main()
@@ -45,7 +46,8 @@ int main()
     //_0929_unique_email_addresses sol;
     //_1503_last_moment_before_all_ants_fall_out_of_a_plank sol;
     //_1535_find_the_winner_of_an_array_game sol;
-    _1759_count_number_of_homogenous_substrings sol;
+    //_1759_count_number_of_homogenous_substrings sol;
+    _2785_sort_vowels_in_a_string sol;
 
     sol.do_test(&sol);
 }
