@@ -142,6 +142,7 @@
     <ClCompile Include="array_and_hash.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="_1930_unique_length_3_palindromic_subsequences.h" />
     <ClInclude Include="_2785_sort_vowels_in_a_string.h" />
     <ClInclude Include="_0001_two_sum.h" />
     <ClInclude Include="_0014_longest_common_prefix.h" />

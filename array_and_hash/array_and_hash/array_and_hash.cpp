@@ -20,13 +20,13 @@
 #include "_1503_last_moment_before_all_ants_fall_out_of_a_plank.h"
 #include "_1535_find_the_winner_of_an_array_game.h"
 #include "_1759_count_number_of_homogenous_substrings.h"
+#include "_1930_unique_length_3_palindromic_subsequences.h"
 #include "_2785_sort_vowels_in_a_string.h"
 
 
 int main()
 {
     vector<string> result = {"pfog##krh,,iegu"};
-
 
     //_0001_two_sum sol;
     //_0014_longest_common_prefix sol;
@@ -47,7 +47,8 @@ int main()
     //_1503_last_moment_before_all_ants_fall_out_of_a_plank sol;
     //_1535_find_the_winner_of_an_array_game sol;
     //_1759_count_number_of_homogenous_substrings sol;
-    _2785_sort_vowels_in_a_string sol;
+    _1930_unique_length_3_palindromic_subsequences sol;
+    //_2785_sort_vowels_in_a_string sol;
 
     sol.do_test(&sol);
 }
