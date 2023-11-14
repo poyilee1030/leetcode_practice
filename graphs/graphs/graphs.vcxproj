@@ -148,6 +148,7 @@
     <ClInclude Include="_0994_rotting_oranges.h" />
     <ClInclude Include="_0207_course_schedule.h" />
     <ClInclude Include="_1743_restore_the_array_from_adjacent_pairs.h" />
+    <ClInclude Include="_2642_design_graph_with_shortest_path_calculator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
