@@ -6,6 +6,7 @@
 
 using namespace std;
 
+
 class _0424_longest_repeating_character_replacement
 {
 public:

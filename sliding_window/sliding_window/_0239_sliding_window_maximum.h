@@ -5,6 +5,7 @@
 
 using namespace std;
 
+
 class _0239_sliding_window_maximum
 {
 public:

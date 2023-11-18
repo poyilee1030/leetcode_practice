@@ -6,14 +6,11 @@
 
 using namespace std;
 
+
 class _0076_minimum_window_substring
 {
 public:
-	string minWindow(string s, string t) {
 
-	}
-
-	/*
 	string minWindow(string s, string t) {
 		if (t.size() > s.size())
 			return "";
@@ -59,7 +56,6 @@ public:
 
 		return "";
 	}
-	*/
 
 	void do_test(_0076_minimum_window_substring* sol)
 	{
