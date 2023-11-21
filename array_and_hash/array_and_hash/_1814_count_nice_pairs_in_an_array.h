@@ -12,36 +12,32 @@ using namespace std;
 class _1814_count_nice_pairs_in_an_array
 {
 public:
-	int countNicePairs(vector<int>& nums) {
-		vector<int> revs;
-		for (int n : nums) {
-			string s = to_string(n);
-			reverse(s.begin(), s.end());
-			int d = stoi(s);
-			revs.push_back(d);
-		}
+    int countNicePairs(vector<int>& nums) {
+        vector<int> arr;
+        for (int i = 0; i < nums.size(); i++) {
+            arr.push_back(nums[i] - rev(nums[i]));
+        }
 
-		vector<int> diffs;
-		for (int i = 0; i < nums.size(); i++) {
-			diffs.push_back(nums[i] - revs[i]);
-		}
+        unordered_map<int, int> dic;
+        int ans = 0;
+        int MOD = 1e9 + 7;
+        for (int num : arr) {
+            ans = (ans + dic[num]) % MOD;
+            dic[num]++;
+        }
 
-		int result = 0;
-		unordered_set<int> sset;
-		for (int i = 0; i < diffs.size(); i++) {
-			int d = diffs[i];
-			if (sset.find(d) != sset.end()) {
-				sset.erase(d);
-				result++;
-			}
-			else {
-				sset.insert(d);
-			}
-		}
-		return result;
-	}
+        return ans;
+    }
 
-	
+    int rev(int num) {
+        int result = 0;
+        while (num > 0) {
+            result = result * 10 + num % 10;
+            num /= 10;
+        }
+
+        return result;
+    }
 
 	void do_test(_1814_count_nice_pairs_in_an_array* sol) {
 		vector<int> nums1 = { 42, 11, 1, 97 };
