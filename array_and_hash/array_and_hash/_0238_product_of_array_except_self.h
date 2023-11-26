@@ -42,12 +42,15 @@ public:
         sol->print_result(ret2);
     }
 
-    void print_result(vector<int>& result)
+    void print_result(vector<int>& res)
     {
         cout << "[";
-        for (int i : result)
+        for (int i = 0; i < res.size(); i++)
         {
-            cout << i << ",";
+            cout << res[i];
+            if (i < res.size() - 1) {
+                cout << ",";
+            }
         }
         cout << "]" << endl;
     }

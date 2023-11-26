@@ -142,6 +142,7 @@
     <ClCompile Include="array_and_hash.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="_1685_sum_of_absolute_differences_in_a_sorted_array.h" />
     <ClInclude Include="_1814_count_nice_pairs_in_an_array.h" />
     <ClInclude Include="_1930_unique_length_3_palindromic_subsequences.h" />
     <ClInclude Include="_1980_find_unique_binary_string.h" />
