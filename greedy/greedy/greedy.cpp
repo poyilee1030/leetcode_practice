@@ -13,9 +13,9 @@
 
 int main()
 {
-    //_0045_jump_game_ii sol;
+    _0045_jump_game_ii sol;
     //_0053_maximum_subarray sol;
-    _0055_jump_game sol;
+    //_0055_jump_game sol;
     //_0134_gas_station sol;
     //_0678_valid_parenthesis_string sol;
     //_0763_partition_labels sol;
