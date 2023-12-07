@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <vector>
+#include <map>
 
 using namespace std;
 
@@ -10,7 +11,32 @@ class _0846_hand_of_straights
 {
 public:
 	bool isNStraightHand(vector<int>& hand, int groupSize) {
-		return false;
+        int n = hand.size();
+
+        if (n % groupSize != 0) {
+            return false;
+        }
+
+        // map {card value -> count}
+        map<int, int> m;
+        for (int i = 0; i < n; i++) {
+            m[hand[i]]++;
+        }
+
+        while (!m.empty()) {
+            int curr = m.begin()->first;
+            for (int i = 0; i < groupSize; i++) {
+                if (m[curr + i] == 0) {
+                    return false;
+                }
+                m[curr + i]--;
+                if (m[curr + i] < 1) {
+                    m.erase(curr + i);
+                }
+            }
+        }
+
+        return true;
 	}
 
 	void do_test(_0846_hand_of_straights* sol) {
