@@ -8,6 +8,8 @@ using namespace std;
 class _0206_reverse_linked_list
 {
 public:
+    // iterative
+    /*
     ListNode* reverseList(ListNode* head) {
         if (head == NULL || head->next == NULL)
             return head;
@@ -23,6 +25,28 @@ public:
             curr = tmp;
         }
         return prev;
+    }
+    */
+    
+    // recursive
+    ListNode* reverseList(ListNode* head) {
+        if (head == NULL) {
+            return head;
+        }
+
+        ListNode* newHead = reverseList_internal(head, head->next);
+        head->next = NULL;
+        return newHead;
+    }
+
+    ListNode* reverseList_internal(ListNode* prev, ListNode* curr) {
+        if (curr == NULL) {
+            return prev;
+        }
+
+        ListNode *newHead = reverseList_internal(curr, curr->next);
+        curr->next = prev;
+        return newHead;
     }
 
 	void do_test(_0206_reverse_linked_list *sol)
