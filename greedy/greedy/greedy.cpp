@@ -17,9 +17,9 @@ int main()
     //_0053_maximum_subarray sol;
     //_0055_jump_game sol;
     //_0134_gas_station sol;
-    //_0678_valid_parenthesis_string sol;
+    _0678_valid_parenthesis_string sol;
     //_0763_partition_labels sol;
-    _0846_hand_of_straights sol;
+    //_0846_hand_of_straights sol;
     //_1899_merge_triplets_to_form_target_triplet sol;
 
     sol.do_test(&sol);

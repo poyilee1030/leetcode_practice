@@ -31,5 +31,11 @@ public:
 		bool ret3 = sol->checkValidString(s3);
 		cout << ret3 << endl;
 		// Output : true
+
+		string s4 = "((((()(()()()*()(((((*)()*(**(())))))(())()())(((())())())))))))(((((())*)))()))(()((*()*(*)))(*)()";
+		bool ret4 = sol->checkValidString(s4);
+		cout << ret4 << endl;
+		// Output : true
+
 	}
 };

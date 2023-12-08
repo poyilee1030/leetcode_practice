@@ -10,6 +10,32 @@ class _0045_jump_game_ii
 {
 public:
     int jump(vector<int>& nums) {
+        int n = nums.size();
+        int result = 0;
+
+        int i = 0;
+        while (i < n - 1) {
+            if (i + nums[i] >= n - 1) {
+                result++;
+                break;
+            }
+            int maxIndex = i + 1;
+            int maxValue = 0;
+            for (int j = i + 1; j < i + 1 + nums[i]; j++) {
+                if (j + nums[j] > maxValue) {
+                    maxIndex = j;
+                    maxValue = j + nums[j];
+                }
+            }
+            i = maxIndex;
+            result++;
+        }
+
+        return result;
+    }
+    
+    /* Time Limit Exceed, 想加入 cache 但想不到好方法
+    int jump(vector<int>& nums) {
         int res = dfs(nums, 0, 0);
         return res;
     }
@@ -27,9 +53,9 @@ public:
                 mincnt = cnt;
             }
         }
-
         return mincnt;
     }
+    */
 
 	void do_test(_0045_jump_game_ii* sol) {
         vector<int> nums0 = { 1, 2, 1, 1, 1 };

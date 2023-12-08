@@ -46,7 +46,6 @@ public:
 		cout << ret1 << endl;
 		// Output : true
 		// Explanation : Alice's hand can be rearranged as [1,2,3],[2,3,4],[6,7,8]
-		
 
 		vector<int> hand2 = { 1, 2, 3, 4, 5 };
 		int groupSize2 = 4;
