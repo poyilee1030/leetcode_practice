@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <vector>
+#include <unordered_map>
 #include <string>
 
 using namespace std;
@@ -11,8 +12,25 @@ class _0763_partition_labels
 {
 public:
 	vector<int> partitionLabels(string s) {
-		vector<int> q;
-		return q;
+		vector<int> result;
+		unordered_map<char, int> map;
+
+		for (int i = 0; i < s.size(); i++) {
+			map[s[i]] = i;
+		}
+
+		int end = 0;
+		int size = 0;
+		for (int i = 0; i < s.size(); i++) {
+			end = max(end, map[s[i]]);
+			size++;
+			if (i >= end) {
+				result.push_back(size);
+				size = 0;
+			}
+		}
+
+		return result;
 	}
 
 	void do_test(_0763_partition_labels* sol) {
@@ -27,7 +45,6 @@ public:
 		A partition like "ababcbacadefegde", "hijhklij" is incorrect, 
 		because it splits s into less parts.
 		*/
-		
 
 		string s2 = "eccbbbbdec";
 		vector<int> ret2 = sol->partitionLabels(s2);
@@ -37,7 +54,7 @@ public:
 
 	void print_res(vector<int>& res) {
 		cout << "[";
-		for (int i = 0; i < res.size() - 1;i++) {
+		for (int i = 0; i < res.size(); i++) {
 			cout << res[i];
 			if (i < res.size() - 1)
 				cout << ",";
