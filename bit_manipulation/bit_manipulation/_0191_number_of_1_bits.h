@@ -38,7 +38,6 @@ public:
 		// Output : 1
 		// Explanation : The input binary string 00000000000000000000000010000000 has a total of one '1' bit.
 		
-
 		string s3 = "11111111111111111111111111111101";
 		uint32_t n3 = convert_string_to_uint32(s3);
 		int ret3 = sol->hammingWeight(n3);

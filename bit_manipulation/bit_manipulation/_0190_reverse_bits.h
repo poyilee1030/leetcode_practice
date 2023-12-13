@@ -9,7 +9,12 @@ class _0190_reverse_bits
 {
 public:
 	uint32_t reverseBits(uint32_t n) {
-		return 0;
+		int res = 0;
+		for (int i = 0; i < 32; i++) {
+			int bit = (n >> i) & 1;
+			res = res | (bit << (31-i));
+		}
+		return res;
 	}
 
 	void do_test(_0190_reverse_bits* sol)

@@ -18,9 +18,9 @@ int main()
     //_0007_reverse_integer sol;
     //_0067_add_binary sol;
     //_0136_single_number sol;
-    //_0190_reverse_bits sol;
+    _0190_reverse_bits sol;
     //_0191_number_of_1_bits sol;
-    _0268_missing_number sol;
+    //_0268_missing_number sol;
     //_0338_counting_bits sol;
     //_0371_sum_of_two_integers sol;
     //_0989_add_to_array_form_of_integer sol;
