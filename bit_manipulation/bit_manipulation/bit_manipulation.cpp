@@ -20,9 +20,9 @@ int main()
     //_0136_single_number sol;
     //_0190_reverse_bits sol;
     //_0191_number_of_1_bits sol;
-    _0268_missing_number sol;
+    //_0268_missing_number sol;
     //_0338_counting_bits sol;
-    //_0371_sum_of_two_integers sol;
+    _0371_sum_of_two_integers sol;
     //_0989_add_to_array_form_of_integer sol;
     //_1470_shuffle_the_array sol;
 
