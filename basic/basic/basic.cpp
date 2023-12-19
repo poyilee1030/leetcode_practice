@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <string>
 #include <unordered_map>
 #include <unordered_set>
 
@@ -22,8 +23,22 @@ int main()
     // unordered_map
     unordered_map<char, int> map;
     map['a'] = 1;
-    map['b'] = 1;
+    map['b'] = 2;
+    map['c'] = 3;
+    map['d'] = 4;
+    map['e'] = 5;
     map.erase('a');
+
+    iterator<char, int> it;
+
+    // string
+    // string to int
+    string s = "123";
+    int a = stoi(s);
+    // int to string
+    int b = 456;
+    string t = to_string(b);
+    
 
     cout << "z";
 }
