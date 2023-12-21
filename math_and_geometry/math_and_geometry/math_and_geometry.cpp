@@ -19,9 +19,9 @@ int main()
     //_0054_spiral_matrix sol;
     //_0066_plus_one sol;
     //_0073_set_matrix_zeroes sol;
-    //_0202_happy_number sol;
+    _0202_happy_number sol;
     //_2013_detect_squares sol;
-    _2849_determine_if_a_cell_is_reachable_at_a_given_time sol;
+    //_2849_determine_if_a_cell_is_reachable_at_a_given_time sol;
 
     sol.do_test(&sol);
 }
