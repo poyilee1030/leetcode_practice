@@ -24,14 +24,15 @@ public:
         TreeNode* t3 = new TreeNode(3);
         TreeNode* t2 = new TreeNode(2, t4, t5);
         TreeNode* t1 = new TreeNode(1, t2, t3);
-
         int res = sol->diameterOfBinaryTree(t1);
         cout << res << endl;
+        // Output: 3
 
         TreeNode* nt2 = new TreeNode(2);
         TreeNode* nt1 = new TreeNode(1, nt2, NULL);
         int res2 = sol->diameterOfBinaryTree(nt1);
         cout << res2 << endl;
+        // Output: 1
 	}
 private:
     int dfs(TreeNode* root, int& result)

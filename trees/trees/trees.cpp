@@ -24,7 +24,7 @@ int main()
     //_0105_construct_binary_tree_from_preorder_and_inorder_traversal sol;
     //_0100_same_tree sol;
     //_0102_binary_tree_level_order_traversal sol;
-    //_0104_maximum_depth_of_binary_tree sol;
+    _0104_maximum_depth_of_binary_tree sol;
     //_0110_balanced_binary_tree sol;
     //_0199_binary_tree_right_side_view sol;
     //_0226_invert_binary_tree sol;
@@ -34,7 +34,7 @@ int main()
     //_0543_diameter_of_binary_tree sol;
     //_0572_subtree_of_another_tree sol;
     //_1448_count_good_nodes_in_binary_tree sol;
-    _2265_count_nodes_equal_to_average_of_subtree sol;
+    //_2265_count_nodes_equal_to_average_of_subtree sol;
 
     sol.do_test(&sol);
 }

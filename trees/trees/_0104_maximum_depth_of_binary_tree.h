@@ -9,15 +9,16 @@ using namespace std;
 class _0104_maximum_depth_of_binary_tree
 {
 public:
-	int maxDepth(TreeNode* root) {
-        if (root == NULL)
+    int maxDepth(TreeNode* root) {
+        if (root == NULL) {
             return 0;
+        }
 
         int left = maxDepth(root->left);
         int right = maxDepth(root->right);
 
         return 1 + max(left, right);
-	}
+    }
 
 	void do_test(_0104_maximum_depth_of_binary_tree* sol)
 	{
@@ -29,11 +30,13 @@ public:
 
         int res = sol->maxDepth(t3);
         cout << res << endl;
+        // Output: 3
 
         TreeNode* t2 = new TreeNode(2);
         TreeNode* t1 = new TreeNode(1, NULL, t2);
         int res2 = sol->maxDepth(t1);
         cout << res2 << endl;
+        // Output: 2
 	}
 };
 
