@@ -10,8 +10,37 @@ class _0054_spiral_matrix
 {
 public:
 	vector<int> spiralOrder(vector<vector<int>>& matrix) {
-		vector<int> q;
-		return q;
+        int top = 0;
+        int bottom = matrix.size();
+        int left = 0;
+        int right = matrix[0].size();
+
+        vector<int> output;
+        while (left < right && top < bottom) {
+            for (int i = left; i < right; i++) {
+                output.push_back(matrix[top][i]);
+            }
+            top++;
+
+            for (int j = top; j < bottom; j++) {
+                output.push_back(matrix[j][right-1]);
+            }
+            right--;
+
+            if (left >= right || top >= bottom)
+                break;
+
+            for (int i = right - 1; i >= left; i--) {
+                output.push_back(matrix[bottom - 1][i]);
+            }
+            bottom--;
+
+            for (int j = bottom - 1; j >= top; j--) {
+                output.push_back(matrix[j][left]);
+            }
+            left++;
+        }
+        return output;
 	}
 
 	void do_test(_0054_spiral_matrix* sol) {
