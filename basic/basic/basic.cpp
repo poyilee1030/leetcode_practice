@@ -91,7 +91,23 @@ void basic_unordered_map() {
     map['e'] = 5;
     map.erase('a');
 
-    iterator<char, int> it;
+    cout << "way 1" << endl;
+    for (auto& it : map) {
+        cout << it.first << ": " << it.second << endl;
+    }
+    
+    cout << "way 2" << endl;
+    for (auto i = map.begin(); i != map.end(); i++) {
+        cout << i->first << ": " << i->second << endl;
+    }
+    
+    cout << "way 3" << endl;
+    unordered_map<char, int>::iterator it2 = map.begin();
+    while (it2 != map.end()) {
+        int count = it2->second;
+        cout << it2->first << ": " << it2->second << endl;
+        it2++;
+    }
 }
 
 
@@ -108,13 +124,13 @@ void basic_str() {
 
 int main()
 {
-    basic_check();
+    //basic_check();
 
-    basic_vector();
+    //basic_vector();
 
     basic_unordered_map();
 
-    basic_str();
+    //basic_str();
     
 }
 
