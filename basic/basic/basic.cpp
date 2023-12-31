@@ -1,137 +1,24 @@
 // basic.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
-#include <iostream>
-#include <vector>
-#include <string>
-#include <unordered_map>
-#include <unordered_set>
-
-using namespace std;
-
-
-void basic_check() {
-    // toupper
-    char tmp1 = 'c';
-    char res1 = toupper(tmp1);
-    cout << "toupper('c') = " << res1 << endl;
-
-    // tolower
-    char tmp2 = 'C';
-    char res2 = tolower(tmp2);
-    cout << "toupper('C') = " << res2 << endl;
-
-    // isalpha
-    char tmp3 = '9';
-    int res3 = isalpha(tmp3);
-    cout << "isalpha('9') = " << res3 << endl;
-
-    char tmp4 = 'a';
-    int res4 = isalpha(tmp4);
-    cout << "isalpha('a') = " << res4 << endl;
-
-    char tmp5 = 's';
-    int res5 = isalpha(tmp5);
-    cout << "isalpha('s') = " << res5 << endl;
-
-    char tmp6 = 'S';
-    int res6 = isalpha(tmp6);
-    cout << "isalpha('S') = " << res6 << endl;
-
-    // isalnum
-    char tmp7 = '9';
-    int res7 = isalnum(tmp7);
-    cout << "isalnum('9') = " << res7 << endl;
-
-    char tmp8 = 'a';
-    int res8 = isalnum(tmp8);
-    cout << "isalnum('a') = " << res8 << endl;
-
-    char tmp9 = 's';
-    int res9 = isalnum(tmp9);
-    cout << "isalnum('s') = " << res9 << endl;
-
-    char tmp10 = 'S';
-    int res10 = isalnum(tmp10);
-    cout << "isalnum('S') = " << res10 << endl;
-
-    // isdigit
-    char tmp11 = '9';
-    int res11 = isdigit(tmp11);
-    cout << "isdigit('9') = " << res11 << endl;
-
-    // islower
-
-    // isupper
-
-    // isblank
-
-    // isspace
-}
-
-
-void basic_vector() {
-    // vector
-    // declare a vector
-    vector<int> a;
-
-    vector<int> b = { 1, 1, 1, 1, 1 };
-
-    vector<int> c(5, 1); //(size, value)
-}
-
-
-void basic_unordered_map() {
-    // unordered_map
-    unordered_map<char, int> map;
-    map['a'] = 1;
-    map['b'] = 2;
-    map['c'] = 3;
-    map['d'] = 4;
-    map['e'] = 5;
-    map.erase('a');
-
-    cout << "way 1" << endl;
-    for (auto& it : map) {
-        cout << it.first << ": " << it.second << endl;
-    }
-    
-    cout << "way 2" << endl;
-    for (auto i = map.begin(); i != map.end(); i++) {
-        cout << i->first << ": " << i->second << endl;
-    }
-    
-    cout << "way 3" << endl;
-    unordered_map<char, int>::iterator it2 = map.begin();
-    while (it2 != map.end()) {
-        int count = it2->second;
-        cout << it2->first << ": " << it2->second << endl;
-        it2++;
-    }
-}
-
-
-void basic_str() {
-    // string
-    // string to int
-    string ss = "123";
-    int aa = stoi(ss);
-    // int to string
-    int bb = 456;
-    string tt = to_string(bb);
-}
+#include "basic_queue.h"
+#include "basic_str.h"
+#include "basic_unordered_map.h"
+#include "basic_vector.h"
+#include "basic_check.h"
 
 
 int main()
 {
-    //basic_check();
+    basic_queue();
+    
+    //basic_str();
+
+    //basic_unordered_map();
 
     //basic_vector();
-
-    basic_unordered_map();
-
-    //basic_str();
     
+    //basic_check();
 }
 
 

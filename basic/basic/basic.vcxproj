@@ -129,6 +129,13 @@
   <ItemGroup>
     <ClCompile Include="basic.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="basic_queue.h" />
+    <ClInclude Include="basic_str.h" />
+    <ClInclude Include="basic_unordered_map.h" />
+    <ClInclude Include="basic_vector.h" />
+    <ClInclude Include="basic_check.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
