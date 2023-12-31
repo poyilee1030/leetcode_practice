@@ -16,15 +16,23 @@ void basic_queue() {
 	q.push(2); // q = 0 1 2
 	q.push(3); // q = 0 1 2 3
 
+	cout << "q size = " << q.size() << endl;
+
 	q.pop(); // removes the front element, 0
 	assert(q.size() == 3);
 
-	// Print and remove all elements. Note that std::queue does not
-	// support begin()/end(), so a range-for-loop cannot be used.
+	cout << "q.front() = " << q.front() << endl;
+	// queue 只能訪問最前面的一個元素
+	// 如果需要訪問任意位置元素，可使用 dequeue
+
+
 	cout << "q: ";
-	for (; !q.empty(); q.pop())
+	while (!q.empty()) {
 		cout << q.front() << ' ';
-	cout << '\n';
+		q.pop();
+	}
+	cout << endl;
+
 	assert(q.size() == 0);
 }
 
