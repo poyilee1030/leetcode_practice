@@ -10,11 +10,11 @@
 
 int main()
 {
-    basic_queue();
+    //basic_queue();
     
     //basic_str();
 
-    //basic_unordered_map();
+    basic_unordered_map();
 
     //basic_vector();
     

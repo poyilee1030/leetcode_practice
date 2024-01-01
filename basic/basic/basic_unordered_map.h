@@ -17,11 +17,15 @@ void basic_unordered_map() {
     map['c'] = 3;
     map['d'] = 4;
     map['e'] = 5;
+
     map.erase('a');
 
+    auto it0 = map.begin();
+    cout << "begin of map, " << it0->first << ": " << it0->second << endl;
+
     cout << "way 1" << endl;
-    for (auto& it : map) {
-        cout << it.first << ": " << it.second << endl;
+    for (auto& it1 : map) {
+        cout << it1.first << ": " << it1.second << endl;
     }
 
     cout << "way 2" << endl;
