@@ -10,7 +10,14 @@ class _0062_unique_paths
 {
 public:
 	int uniquePaths(int m, int n) {
-		return 0;
+		vector<int> ans(n + 1, 1);
+		ans[n] = 0;
+		for (int j = m - 2; j >= 0; j--) {
+			for (int i = n - 1; i >= 0; i--) {
+				ans[i] += ans[i + 1];
+			}
+		}
+		return ans[0];
 	}
 
 	void do_test(_0062_unique_paths* sol) {
