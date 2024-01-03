@@ -8,8 +8,8 @@
 int main()
 {
     //_0062_unique_paths sol;
-    _0309_best_time_to_buy_and_sell_stock_with_cooldown sol;
-    //_1143_longest_common_subsequence sol;
+    //_0309_best_time_to_buy_and_sell_stock_with_cooldown sol;
+    _1143_longest_common_subsequence sol;
 
     sol.do_test(&sol);
 

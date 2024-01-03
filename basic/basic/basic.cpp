@@ -14,9 +14,9 @@ int main()
     
     //basic_str();
 
-    basic_unordered_map();
+    //basic_unordered_map();
 
-    //basic_vector();
+    basic_vector();
     
     //basic_check();
 }

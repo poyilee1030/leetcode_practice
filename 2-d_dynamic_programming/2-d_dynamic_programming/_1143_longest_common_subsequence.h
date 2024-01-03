@@ -11,7 +11,34 @@ class _1143_longest_common_subsequence
 {
 public:
 	int longestCommonSubsequence(string text1, string text2) {
-		return 0;
+		int m = text1.size();
+		int n = text2.size();
+
+		//(size, value) or (size) value default is 0.
+		vector<vector<int>> matrix(n + 1, vector<int>(m + 1));
+		/*
+		vector<vector<int>> matrix;
+		for (int j = 0; j < n + 1; j++) {
+			vector<int> one_row;
+			for (int i = 0; i < m + 1; i++) {
+				one_row.push_back(0);
+			}
+			matrix.push_back(one_row);
+		}
+		*/
+		
+		for (int j = n - 1; j >= 0; j--) {
+			for (int i = m - 1; i >= 0; i--) {
+				if (text2[j] == text1[i]) {
+					matrix[j][i] = matrix[j + 1][i + 1] + 1;
+				}
+				else {
+					matrix[j][i] = max(matrix[j + 1][i], matrix[j][i + 1]);
+				}
+			}
+		}
+
+		return matrix[0][0];
 	}
 
 	void do_test(_1143_longest_common_subsequence* sol) {
