@@ -132,6 +132,7 @@
   <ItemGroup>
     <ClInclude Include="_0252_meeting_rooms.h" />
     <ClInclude Include="_0253_meeting_rooms_ii.h" />
+    <ClInclude Include="_1235_maximum_profit_in_job_scheduling.h" />
     <ClInclude Include="_1851_minimum_interval_to_include_each_query.h" />
     <ClInclude Include="_0056_merge_intervals.h" />
     <ClInclude Include="_0057_insert_interval.h" />
