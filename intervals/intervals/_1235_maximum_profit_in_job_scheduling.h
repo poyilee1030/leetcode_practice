@@ -46,12 +46,13 @@ public:
 		}
 		*/
 		int j = binary_seach(jobs, jobs[i][1]);
-		cout << "j = " << j << endl;
+		// cout << "j = " << j << endl;
 		cache[i] = res = max(res, jobs[i][2] + dfs(jobs, cache, j));
 		return res;
 	}
 
 	int binary_seach(vector<vector<int>>& jobs, int target) {
+		// 目標是找到某個 idx 使得 jobs[idx][0] >= target
 		int left = 0;
 		int right = jobs.size() - 1;
 		
@@ -66,7 +67,6 @@ public:
 		}
 		return left;
 	}
-
 
 	void do_test(_1235_maximum_profit_in_job_scheduling* sol) {
 		vector<int> startTime1 = {1, 2, 3, 3};
