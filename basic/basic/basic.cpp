@@ -4,6 +4,7 @@
 #include "basic_queue.h"
 #include "basic_str.h"
 #include "basic_unordered_map.h"
+#include "basic_unordered_set.h"
 #include "basic_vector.h"
 #include "basic_check.h"
 
@@ -16,7 +17,9 @@ int main()
 
     //basic_unordered_map();
 
-    basic_vector();
+    basic_unordered_set();
+
+    //basic_vector();
     
     //basic_check();
 }
