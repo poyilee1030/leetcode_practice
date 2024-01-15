@@ -31,4 +31,13 @@ void basic_vector() {
 
     vector<int> d(3); //(size, value default is 0)
     print_vector(d);
+
+    // --------- 2d vector ---------
+    int row_count = 3;
+    int col_count = 5;
+    // value default is 0
+    vector<vector<int>> fog1(row_count, vector<int>(col_count));
+
+    // value default is 4
+    vector<vector<int>> fog2(row_count, vector<int>(col_count, 4));
 }

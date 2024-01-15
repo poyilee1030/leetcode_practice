@@ -10,9 +10,57 @@ using namespace std;
 class _0518_coin_change_ii
 {
 public:
+	/*
+		DYNAMIC PROGRAMMING
+		Time: O(n*m)
+		Memory: O(m) where m = amount
+	*/
 	int change(int amount, vector<int>& coins) {
-		return 0;
+		int n = coins.size();
+		vector<int> dp(amount + 1);
+		dp[0] = 1;
+
+		for (int j = n - 1; j >= 0; j--) {
+			vector<int> nextDP(amount + 1);
+			nextDP[0] = 1;
+
+			for (int i = 1; i <= amount; i++) {
+				nextDP[i] = dp[i];
+				int x = i - coins[j];
+				if (x >= 0) {
+					nextDP[i] += nextDP[x];
+				}
+			}
+			dp = nextDP;
+		}
+		return dp[amount];
 	}
+
+	/*
+		DYNAMIC PROGRAMMING
+		Time: O(n*m)
+		Memory: O(n*m)
+	*/
+	/*
+	int change(int amount, vector<int>& coins) {
+		int n = coins.size();
+		vector<vector<int>> dp(n + 1, vector<int>(amount + 1));
+		for (int j = 0; j < n; j++) {
+			dp[j][0] = 1;
+		}
+
+		for (int j = n - 1; j >= 0; j--) {
+			for (int i = 1; i <= amount; i++) {
+				dp[j][i] = dp[j + 1][i];
+				int x = i - coins[j];
+				if (x >= 0) {
+					dp[j][i] += dp[j][x];
+				}
+			}
+		}
+		return dp[0][amount];
+	}
+	*/
 
 	void do_test(_0518_coin_change_ii* sol) {
 		int amount1 = 5;
