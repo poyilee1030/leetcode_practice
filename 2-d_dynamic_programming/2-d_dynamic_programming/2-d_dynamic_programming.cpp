@@ -2,8 +2,11 @@
 //
 
 #include "_0062_unique_paths.h"
+#include "_0072_edit_distance.h"
 #include "_0097_interleaving_string.h"
+#include "_0115_distinct_subsequences.h"
 #include "_0309_best_time_to_buy_and_sell_stock_with_cooldown.h"
+#include "_0329_longest_increasing_path_in_a_matrix.h"
 #include "_0446_arithmetic_slices_ii_subsequence.h"
 #include "_0494_target_sum.h"
 #include "_0518_coin_change_ii.h"
@@ -12,11 +15,14 @@
 int main()
 {
     //_0062_unique_paths sol;
+    _0072_edit_distance sol;
     //_0097_interleaving_string sol;
+    //_0115_distinct_subsequences sol;
     //_0309_best_time_to_buy_and_sell_stock_with_cooldown sol;
+    //_0329_longest_increasing_path_in_a_matrix sol;
     //_0446_arithmetic_slices_ii_subsequence sol;
     //_0494_target_sum sol;
-    _0518_coin_change_ii sol;
+    //_0518_coin_change_ii sol;
     //_1143_longest_common_subsequence sol;
 
     sol.do_test(&sol);
