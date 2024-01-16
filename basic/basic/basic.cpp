@@ -11,13 +11,29 @@
 
 int main()
 {
+    // n = 0
+    int n = rand() % 1;
+    cout << n << endl;
+
+    // n = 0~9
+    int count = 10;
+    for (int i = 0; i < count; i++) {
+        int x = rand() % count;
+        cout << "n(" << i << ")=" << x;
+        if (i < count-1) {
+            cout << ", ";
+        }
+    }
+    cout << endl;
+    
+
     //basic_queue();
 
     //basic_str();
 
-    //basic_unordered_map();
+    basic_unordered_map();
 
-    basic_unordered_set();
+    //basic_unordered_set();
 
     //basic_vector();
     

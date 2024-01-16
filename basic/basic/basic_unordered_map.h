@@ -18,6 +18,13 @@ void basic_unordered_map() {
     map['d'] = 4;
     map['e'] = 5;
 
+    if (map.find('f') != map.end()) {
+        cout << "exist f" << endl;
+    }
+    else {
+        cout << "not exist f" << endl;
+    }
+
     map.erase('a');
 
     auto it0 = map.begin();
