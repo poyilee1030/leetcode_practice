@@ -2,19 +2,38 @@
 
 #include <iostream>
 #include <vector>
-#include <unordered_map>
+#include <map>
 
 using namespace std;
 
 
 class _0494_target_sum
 {
+	map<pair<int, int>, int> dp;
 public:
 	int findTargetSumWays(vector<int>& nums, int target) {
-		return 0;
+		return backtrack(nums, target, 0, 0);
 	}
 
-	void do_test(_0494_target_sum *sol) {
+	int backtrack(vector<int>& nums, int target, int i, int total) {
+		if (i == nums.size()) {
+			return total == target ? 1 : 0;
+		}
+		if (dp.find({ i, total }) != dp.end()) {
+			return dp[{i, total}];
+		}
+
+		dp[{i, total}] = backtrack(nums, target, i + 1, total + nums[i]) +
+			backtrack(nums, target, i + 1, total - nums[i]);
+
+		return dp[{i, total}];
+	}
+
+	void clean_map() {
+		dp.clear();
+	}
+
+	void do_test(_0494_target_sum* sol) {
 		vector<int> nums1 = { 1, 1, 1, 1, 1 };
 		int target1 = 3;
 		int ret1 = sol->findTargetSumWays(nums1, target1);
@@ -28,6 +47,8 @@ public:
 		+ 1 + 1 + 1 - 1 + 1 = 3
 		+ 1 + 1 + 1 + 1 - 1 = 3
 		*/
+
+		sol->clean_map();
 
 		vector<int> nums2 = { 1 };
 		int target2 = 1;
