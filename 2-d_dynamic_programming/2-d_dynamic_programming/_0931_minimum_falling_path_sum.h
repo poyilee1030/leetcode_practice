@@ -13,7 +13,7 @@ class _0931_minimum_falling_path_sum
 public:
     int minFallingPathSum(vector<vector<int>>& matrix)
     {
-        auto dp = matrix;        // dp[i][j]: minimum sum of a falling path through matrix to (i,j)
+        auto dp = matrix;        // dp[r][c]: minimum sum of a falling path through matrix to (r,c)
         n = matrix.size();
 
         for (int c = 0; c < n; c++)
