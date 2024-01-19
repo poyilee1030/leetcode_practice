@@ -10,6 +10,7 @@
 #include "_0446_arithmetic_slices_ii_subsequence.h"
 #include "_0494_target_sum.h"
 #include "_0518_coin_change_ii.h"
+#include "_0931_minimum_falling_path_sum.h"
 #include "_1143_longest_common_subsequence.h"
 
 int main()
@@ -21,8 +22,9 @@ int main()
     //_0309_best_time_to_buy_and_sell_stock_with_cooldown sol;
     //_0329_longest_increasing_path_in_a_matrix sol;
     //_0446_arithmetic_slices_ii_subsequence sol;
-    _0494_target_sum sol;
+    //_0494_target_sum sol;
     //_0518_coin_change_ii sol;
+    _0931_minimum_falling_path_sum sol;
     //_1143_longest_common_subsequence sol;
 
     sol.do_test(&sol);

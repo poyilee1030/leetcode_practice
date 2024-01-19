@@ -138,6 +138,7 @@
     <ClInclude Include="_0446_arithmetic_slices_ii_subsequence.h" />
     <ClInclude Include="_0494_target_sum.h" />
     <ClInclude Include="_0518_coin_change_ii.h" />
+    <ClInclude Include="_0931_minimum_falling_path_sum.h" />
     <ClInclude Include="_1143_longest_common_subsequence.h" />
     <ClInclude Include="_0115_distinct_subsequences.h" />
   </ItemGroup>
