@@ -56,6 +56,10 @@ void basic_unordered_map() {
 
     myMap[{1, 2}] = "Hello";
     myMap[{3, 4}] = "World";
+
+    if (myMap.find({ 1, 2 }) != myMap.end())
+        cout << "{1, 2} exist in map" << endl;
+
     // to do: const 和 & 在此有何功用?
     for (const auto& entry : myMap) {
         cout << "(" << entry.first.first << ", " << entry.first.second << "): " << entry.second << endl;

@@ -24,7 +24,7 @@ public:
 		}
 
 		dp[{i, total}] = backtrack(nums, target, i + 1, total + nums[i]) +
-			backtrack(nums, target, i + 1, total - nums[i]);
+			             backtrack(nums, target, i + 1, total - nums[i]);
 
 		return dp[{i, total}];
 	}

@@ -1,11 +1,46 @@
 #pragma once
 
+#include <iostream>
+#include <vector>
+#include <unordered_map>
+
+using namespace std;
+
 
 class _0097_interleaving_string
 {
 public:
 	bool isInterleave(string s1, string s2, string s3) {
-		return false;
+		if (s1.size() + s2.size() != s3.size())
+			return false;
+		int n = s1.size() + 1;
+		vector<unordered_map<int, bool>> cache(n);
+		return dfs(s1, s2, s3, 0, 0, cache);
+	}
+
+	bool dfs(string& s1, string& s2, string& s3, int i, int j, vector<unordered_map<int, bool>> &cache) {
+		int k = i + j;
+		if (k == s3.size()) {
+			return true;
+		}
+
+		if (cache[i].find(j) != cache[i].end()) {
+			return cache[i][j];
+		}
+
+		bool r1 = false;
+		if (i < s1.size() && s3[k] == s1[i]) {
+			r1 = dfs(s1, s2, s3, i + 1, j, cache);
+		}
+
+		bool r2 = false;
+		if (j < s2.size() && s3[k] == s2[j]) {
+			r2 = dfs(s1, s2, s3, i, j + 1, cache);
+		}
+
+		cache[i][j] = r1 || r2;
+
+		return cache[i][j];
 	}
 
 	void do_test(_0097_interleaving_string* sol) {
