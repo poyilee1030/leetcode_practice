@@ -8,6 +8,7 @@
 #include "_0155_min_stack.h"
 #include "_0739_daily_temperatures.h"
 #include "_0853_car_fleet.h"
+#include "_0907_sum_of_subarray_minimums.h"
 #include "_1441_build_an_array_with_stack_operations.h"
 
 int main()
@@ -19,7 +20,8 @@ int main()
     //_0155_min_stack sol;
     //_0739_daily_temperatures sol;
     //_0853_car_fleet sol;
-    _1441_build_an_array_with_stack_operations sol;
+    _0907_sum_of_subarray_minimums sol;
+    //_1441_build_an_array_with_stack_operations sol;
 
     sol.do_test(&sol);
 }
