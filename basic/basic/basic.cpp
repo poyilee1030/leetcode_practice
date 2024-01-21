@@ -11,6 +11,12 @@
 
 int main()
 {
+    long mod1 = 1e9 + 7;
+    long mod2 = 1000000007L;
+    long mod3 = std::pow(10,9) + 7;
+    long mod4 = 10 ^ 9 + 7; // wrong
+    //             ↑ 這是 位元運算子的XOR，不是次方
+
     // n = 0
     int n = rand() % 1;
     cout << n << endl;
