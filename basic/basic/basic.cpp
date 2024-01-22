@@ -37,9 +37,9 @@ int main()
 
     //basic_str();
 
-    basic_unordered_map();
+    //basic_unordered_map();
 
-    //basic_unordered_set();
+    basic_unordered_set();
 
     //basic_vector();
     
