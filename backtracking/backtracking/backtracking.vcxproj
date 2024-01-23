@@ -139,6 +139,7 @@
     <ClInclude Include="_0079_word_search.h" />
     <ClInclude Include="_0090_subsets_ii.h" />
     <ClInclude Include="_0131_palindrome_partitioning.h" />
+    <ClInclude Include="_1239_maximum_length_of_concatenated_string_with_unique_characters.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
