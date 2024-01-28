@@ -130,6 +130,7 @@
     <ClCompile Include="2-d_dynamic_programming.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="_0629_k_inverse_pairs_array.h" />
     <ClInclude Include="_0062_unique_paths.h" />
     <ClInclude Include="_0072_edit_distance.h" />
     <ClInclude Include="_0097_interleaving_string.h" />

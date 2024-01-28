@@ -11,6 +11,7 @@
 #include "_0494_target_sum.h"
 #include "_0518_coin_change_ii.h"
 #include "_0576_out_of_boundary_paths.h"
+#include "_0629_k_inverse_pairs_array.h"
 #include "_0931_minimum_falling_path_sum.h"
 #include "_1143_longest_common_subsequence.h"
 
@@ -25,7 +26,8 @@ int main()
     //_0446_arithmetic_slices_ii_subsequence sol;
     //_0494_target_sum sol;
     //_0518_coin_change_ii sol;
-    _0576_out_of_boundary_paths sol;
+    //_0576_out_of_boundary_paths sol;
+    _0629_k_inverse_pairs_array sol;
     //_0931_minimum_falling_path_sum sol;
     //_1143_longest_common_subsequence sol;
 
