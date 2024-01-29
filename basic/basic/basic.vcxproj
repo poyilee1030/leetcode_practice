@@ -131,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="basic_queue.h" />
+    <ClInclude Include="basic_stack.h" />
     <ClInclude Include="basic_str.h" />
     <ClInclude Include="basic_unordered_map.h" />
     <ClInclude Include="basic_unordered_set.h" />

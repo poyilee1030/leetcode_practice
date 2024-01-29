@@ -5,6 +5,7 @@
 #include "basic_str.h"
 #include "basic_unordered_map.h"
 #include "basic_unordered_set.h"
+#include "basic_stack.h"
 #include "basic_vector.h"
 #include "basic_check.h"
 
@@ -39,7 +40,9 @@ int main()
 
     //basic_unordered_map();
 
-    basic_unordered_set();
+    //basic_unordered_set();
+
+    basic_stack();
 
     //basic_vector();
     
