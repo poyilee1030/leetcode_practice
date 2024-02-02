@@ -2,7 +2,7 @@
 //
 
 #include "basic_queue.h"
-#include "basic_str.h"
+#include "basic_string.h"
 #include "basic_unordered_map.h"
 #include "basic_unordered_set.h"
 #include "basic_stack.h"
@@ -36,13 +36,13 @@ int main()
 
     //basic_queue();
 
-    //basic_str();
+    basic_string_operate();
 
     //basic_unordered_map();
 
     //basic_unordered_set();
 
-    basic_stack();
+    //basic_stack();
 
     //basic_vector();
     
