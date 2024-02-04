@@ -10,7 +10,57 @@ using namespace std;
 class _0076_minimum_window_substring
 {
 public:
+	// 自己想的，雖然過了但效率很差
+	// 應該是比對 map 太花時間
+	string minWindow(string s, string t) {
+		if (t.size() > s.size())
+			return "";
+		unordered_map<char, int> target_map;
+		for (char c : t)
+			target_map[c]++;
 
+		unordered_map<char, int> current_map;
+
+		int l = 0;
+		int r = 0;
+		int min_start = -1;
+		int min_length = INT_MAX;
+
+		while (r <= s.size() || l < r) {
+			if (currMapIsValid(target_map, current_map)) {
+				if (r - l < min_length) {
+					min_length = r - l;
+					min_start = l;
+				}
+
+				char c = s[l];
+				current_map[c]--;
+				l++;
+			}
+			else {
+				if (r == s.size())
+					break;
+				char c = s[r];
+				current_map[c]++;
+				r++;
+			}
+		}
+		if (min_start < 0) {
+			return "";
+		}
+		return s.substr(min_start, min_length);
+	}
+
+	bool currMapIsValid(unordered_map<char, int>& target_map, unordered_map<char, int>& current_map) {
+		for (auto it : target_map) {
+			if (current_map.find(it.first) == current_map.end())
+				return false;
+			if (it.second > current_map[it.first])
+				return false;
+		}
+		return true;
+	}
+	/*
 	string minWindow(string s, string t) {
 		if (t.size() > s.size())
 			return "";
@@ -56,7 +106,7 @@ public:
 
 		return "";
 	}
-
+	*/
 	void do_test(_0076_minimum_window_substring* sol)
 	{
 		string s1 = "ADOBECODEBANC";
