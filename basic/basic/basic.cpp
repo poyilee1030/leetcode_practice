@@ -8,6 +8,7 @@
 #include "basic_stack.h"
 #include "basic_vector.h"
 #include "basic_check.h"
+#include "basic_algorithm.h"
 
 
 int main()
@@ -36,7 +37,7 @@ int main()
 
     //basic_queue();
 
-    basic_string_operate();
+    //basic_string_operate();
 
     //basic_unordered_map();
 
@@ -47,6 +48,8 @@ int main()
     //basic_vector();
     
     //basic_check();
+
+    basic_algorithm();
 }
 
 

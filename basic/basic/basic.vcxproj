@@ -130,6 +130,7 @@
     <ClCompile Include="basic.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="basic_algorithm.h" />
     <ClInclude Include="basic_queue.h" />
     <ClInclude Include="basic_stack.h" />
     <ClInclude Include="basic_string.h" />

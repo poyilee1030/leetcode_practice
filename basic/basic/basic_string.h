@@ -28,4 +28,15 @@ void basic_string_operate() {
         l++;
     }
     
+    // 當 length 比較長的時候，用 for loop 逐次疊加效率很差
+    // to init a string with length and char
+    int L = 10;
+    char C = 'B';
+    string tmp1(L, C);
+    cout << "tmp1 = " << tmp1 << endl;
+
+    string tmp2;
+    tmp2.append(L, C);
+    cout << "tmp2 = " << tmp2 << endl;
+
 }
