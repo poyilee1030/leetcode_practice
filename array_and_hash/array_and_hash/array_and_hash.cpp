@@ -19,6 +19,7 @@
 #include "_0929_unique_email_addresses.h"
 #include "_1074_number_of_submatrices_that_sum_to_targe.h"
 #include "_1160_find_words_that_can_be_formed_by_characters.h"
+#include "_1481_least_number_of_unique_integers_after_k_removals.h"
 #include "_1503_last_moment_before_all_ants_fall_out_of_a_plank.h"
 #include "_1535_find_the_winner_of_an_array_game.h"
 #include "_1685_sum_of_absolute_differences_in_a_sorted_array.h"
@@ -50,8 +51,9 @@ int main()
     //_0347_top_k_frequent_elements sol;
     //_0392_is_subsequence sol;
     //_0929_unique_email_addresses sol;
-    _1074_number_of_submatrices_that_sum_to_targe sol;
+    //_1074_number_of_submatrices_that_sum_to_targe sol;
     //_1160_find_words_that_can_be_formed_by_characters sol;
+    _1481_least_number_of_unique_integers_after_k_removals sol;
     //_1503_last_moment_before_all_ants_fall_out_of_a_plank sol;
     //_1535_find_the_winner_of_an_array_game sol;
     //_1685_sum_of_absolute_differences_in_a_sorted_array sol;
