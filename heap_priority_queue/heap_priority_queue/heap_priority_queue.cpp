@@ -8,6 +8,7 @@
 #include "_0703_kth_largest_element_in_a_stream.h"
 #include "_0973_k_closest_points_to_origin.h"
 #include "_1046_last_stone_weight.h"
+#include "_1642_furthest_building_you_can_reach.h"
 #include "_1845_seat_reservation_manager.h"
 #include "_1921_eliminate_maximum_number_of_monsters.h"
 
@@ -21,7 +22,8 @@ int main()
     //_0703_kth_largest_element_in_a_stream sol;
     //_0973_k_closest_points_to_origin sol;
     //_1046_last_stone_weight sol;
-    _1845_seat_reservation_manager sol;
+    _1642_furthest_building_you_can_reach sol;
+    //_1845_seat_reservation_manager sol;
     //_1921_eliminate_maximum_number_of_monsters sol;
 
     sol.do_test(&sol);
