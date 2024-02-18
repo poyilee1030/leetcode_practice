@@ -23,7 +23,7 @@ void basic_vector() {
     // declare a vector
     vector<int> a;
 
-    vector<int> b = { 1, 2, 3, 4, 5 };
+    vector<int> b = { 1, 2, 3, 4, 5, 19, 11, 7};
     print_vector(b);
 
     vector<int> c(5, 1); //(size, value)
@@ -31,6 +31,18 @@ void basic_vector() {
 
     vector<int> d(3); //(size, value default is 0)
     print_vector(d);
+
+    // 找 vector 中最大的位置 (以 vector b 為例)
+    int max_idx = max_element(b.begin(), b.end()) - b.begin();
+    cout << "max_idx = " << max_idx << endl;
+
+    // 找 vector 中最大的位置 (以 vector b 為例) 寫法1
+    vector<int>::iterator it;
+    it = max_element(b.begin(), b.end());
+    cout << "max value (style 1) = " << *it << endl;
+
+    // 找 vector 中最大的位置 (以 vector b 為例) 寫法2
+    cout << "max value (style 2) = " << *max_element(b.begin(), b.end()) << endl;
 
     // --------- 2d vector ---------
     int row_count = 3;

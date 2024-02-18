@@ -45,11 +45,11 @@ int main()
 
     //basic_stack();
 
-    //basic_vector();
+    basic_vector();
     
     //basic_check();
 
-    basic_algorithm();
+    //basic_algorithm();
 }
 
 
