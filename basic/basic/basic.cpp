@@ -1,14 +1,15 @@
 // basic.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
+#include "basic_algorithm.h"
+#include "basic_bitwise.h"
+#include "basic_check.h"
 #include "basic_queue.h"
+#include "basic_stack.h"
 #include "basic_string.h"
 #include "basic_unordered_map.h"
 #include "basic_unordered_set.h"
-#include "basic_stack.h"
 #include "basic_vector.h"
-#include "basic_check.h"
-#include "basic_algorithm.h"
 
 
 int main()
@@ -32,7 +33,7 @@ int main()
             cout << ", ";
         }
     }
-    cout << endl;
+    cout << endl << "-------------------------------------------------------" << endl;
     
 
     //basic_queue();
@@ -45,11 +46,13 @@ int main()
 
     //basic_stack();
 
-    basic_vector();
+    //basic_vector();
     
     //basic_check();
 
     //basic_algorithm();
+
+    basic_bitwise();
 }
 
 
