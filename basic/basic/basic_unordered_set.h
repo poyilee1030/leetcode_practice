@@ -10,7 +10,7 @@ using namespace std;
 
 void basic_unordered_set() {
 	// unordered_set
-	unordered_set<char> st;
+	unordered_set<char> st = {'x'};
 
 	st.insert('a');
 	st.insert({ 'e', 'i', 'o', 'u'});

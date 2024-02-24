@@ -42,7 +42,7 @@ int main()
 
     //basic_unordered_map();
 
-    //basic_unordered_set();
+    basic_unordered_set();
 
     //basic_stack();
 
@@ -52,7 +52,7 @@ int main()
 
     //basic_algorithm();
 
-    basic_bitwise();
+    //basic_bitwise();
 }
 
 
