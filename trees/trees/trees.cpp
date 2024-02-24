@@ -22,7 +22,7 @@
 
 int main()
 {
-    //_0098_validate_binary_search_tree sol;
+    _0098_validate_binary_search_tree sol;
     //_0105_construct_binary_tree_from_preorder_and_inorder_traversal sol;
     //_0100_same_tree sol;
     //_0102_binary_tree_level_order_traversal sol;
@@ -38,7 +38,7 @@ int main()
     //_1448_count_good_nodes_in_binary_tree sol;
     //_2265_count_nodes_equal_to_average_of_subtree sol;
     //_2385_amount_of_time_for_binary_tree_to_be_infected_bfs sol;
-    _2385_amount_of_time_for_binary_tree_to_be_infected_dfs sol;
+    //_2385_amount_of_time_for_binary_tree_to_be_infected_dfs sol;
 
     sol.do_test(&sol);
 }
