@@ -135,6 +135,7 @@
     <ClInclude Include="basic_queue.h" />
     <ClInclude Include="basic_stack.h" />
     <ClInclude Include="basic_string.h" />
+    <ClInclude Include="basic_union_find.h" />
     <ClInclude Include="basic_unordered_map.h" />
     <ClInclude Include="basic_unordered_set.h" />
     <ClInclude Include="basic_vector.h" />

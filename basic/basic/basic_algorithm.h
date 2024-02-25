@@ -60,7 +60,21 @@ void example2() {
     print_vector_of_vector(vec);
 }
 
+static bool cmp(vector<int>& a, vector<int>& b)
+{
+    return a[2] < b[2];
+}
+
+void example3() {
+    vector<vector<int>> vec = { {3, 1, 3},{1, 2, 2},{0, 3, 3} };
+
+    sort(vec.begin(), vec.end(), cmp);
+
+    print_vector_of_vector(vec);
+}
+
 void basic_algorithm() {
     //example1();
-    example2();
+    //example2();
+    example3();
 }

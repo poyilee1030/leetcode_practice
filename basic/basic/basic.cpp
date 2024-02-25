@@ -10,6 +10,7 @@
 #include "basic_unordered_map.h"
 #include "basic_unordered_set.h"
 #include "basic_vector.h"
+#include "basic_union_find.h"
 
 
 int main()
@@ -33,8 +34,8 @@ int main()
             cout << ", ";
         }
     }
+
     cout << endl << "-------------------------------------------------------" << endl;
-    
 
     //basic_queue();
 
@@ -42,7 +43,7 @@ int main()
 
     //basic_unordered_map();
 
-    basic_unordered_set();
+    //basic_unordered_set();
 
     //basic_stack();
 
@@ -53,6 +54,10 @@ int main()
     //basic_algorithm();
 
     //basic_bitwise();
+
+    basic_union_find();
+
+    cout << endl << "-------------------------------------------------------" << endl;
 }
 
 
