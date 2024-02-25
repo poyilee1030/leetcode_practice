@@ -136,6 +136,7 @@
     <ClInclude Include="_0787_cheapest_flights_within_k_stops.h" />
     <ClInclude Include="_1584_min_cost_to_connect_all_points.h" />
     <ClInclude Include="_0743_network_delay_time.h" />
+    <ClInclude Include="_2092_find_all_people_with_secret.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
