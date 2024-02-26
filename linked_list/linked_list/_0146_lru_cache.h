@@ -7,7 +7,7 @@
 using namespace std;
 
 
-
+// Least Recently Used (LRU) cache.
 class _0146_lru_cache
 {
 public:
@@ -54,19 +54,19 @@ public:
 	void do_test(_0146_lru_cache* sol)
 	{
         //LRUCache lRUCache = new LRUCache(2);
-        sol->put(1, 1); // cache is {1=1}
-        sol->put(2, 2); // cache is {1=1, 2=2}
-        int ret1 = sol->get(1);    // return 1
+        sol->put(1, 1);         // cache is {1=1}
+        sol->put(2, 2);         // cache is {1=1, 2=2}
+        int ret1 = sol->get(1); // return 1
         cout << ret1 << endl;
-        sol->put(3, 3); // LRU key was 2, evicts key 2, cache is {1=1, 3=3}
-        int ret2 = sol->get(2);    // returns -1 (not found)
+        sol->put(3, 3);         // LRU key was 2, evicts key 2, cache is {1=1, 3=3}
+        int ret2 = sol->get(2); // returns -1 (not found)
         cout << ret2 << endl;
-        sol->put(4, 4); // LRU key was 1, evicts key 1, cache is {4=4, 3=3}
-        int ret3 = sol->get(1);    // return -1 (not found)
+        sol->put(4, 4);         // LRU key was 1, evicts key 1, cache is {4=4, 3=3}
+        int ret3 = sol->get(1); // return -1 (not found)
         cout << ret3 << endl;
-        int ret4 = sol->get(3);    // return 3
+        int ret4 = sol->get(3); // return 3
         cout << ret4 << endl;
-        int ret5 = sol->get(4);    // return 4
+        int ret5 = sol->get(4); // return 4
         cout << ret5 << endl;
 	}
 
@@ -97,5 +97,3 @@ private:
         node->next = next;
     }
 };
-
-
