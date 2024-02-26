@@ -140,6 +140,7 @@
     <ClInclude Include="basic_unordered_set.h" />
     <ClInclude Include="basic_vector.h" />
     <ClInclude Include="basic_check.h" />
+    <ClInclude Include="template.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
