@@ -170,6 +170,7 @@
     <ClInclude Include="_1503_last_moment_before_all_ants_fall_out_of_a_plank.h" />
     <ClInclude Include="_1535_find_the_winner_of_an_array_game.h" />
     <ClInclude Include="_1759_count_number_of_homogenous_substrings.h" />
+    <ClInclude Include="_2864_maximum_odd_binary_number.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
