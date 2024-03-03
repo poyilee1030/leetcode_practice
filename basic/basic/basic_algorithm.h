@@ -37,7 +37,6 @@ void print_vector_of_vector(vector<vector<T>> v) {
             cout << ", ";
         }
     }
-    
     cout << "]" << endl;
 }
 

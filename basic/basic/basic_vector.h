@@ -6,7 +6,8 @@
 using namespace std;
 
 
-void print_vector(vector<int> v) {
+template <typename T>
+void print_vector(vector<T> v) {
     cout << "[";
     for (int i = 0; i < v.size(); i++) {
         cout << v[i];
@@ -17,12 +18,31 @@ void print_vector(vector<int> v) {
     cout << "]" << endl;
 }
 
+template <typename T>
+void print_vector_of_vector(vector<vector<T>> v) {
+    cout << "[";
+    for (auto j = 0; j < v.size(); j++) {
+        cout << "[";
+        vector<T> vt = v[j];
+        for (int i = 0; i < vt.size(); i++) {
+            cout << vt[i];
+            if (i < vt.size() - 1) {
+                cout << ",";
+            }
+        }
+        cout << "]";
+        if (j < v.size() - 1) {
+            cout << ", ";
+        }
+    }
+    cout << "]" << endl;
+}
+
 
 void basic_vector() {
-    // vector
-    // declare a vector
+    // --------- 1d vector 初始化 ---------
+    
     vector<int> a;
-
     vector<int> b = { 1, 2, 3, 4, 5, 19, 11, 7};
     print_vector(b);
 
@@ -31,6 +51,7 @@ void basic_vector() {
 
     vector<int> d(3); //(size, value default is 0)
     print_vector(d);
+
 
     // 找 vector 中最大的位置 (以 vector b 為例)
     int max_idx = max_element(b.begin(), b.end()) - b.begin();
@@ -44,7 +65,17 @@ void basic_vector() {
     // 找 vector 中最大的位置 (以 vector b 為例) 寫法2
     cout << "max value (style 2) = " << *max_element(b.begin(), b.end()) << endl;
 
-    // --------- 2d vector ---------
+
+    // merge 1d vector
+    vector<int> A = { 2, 3, 4, 5 };
+    vector<int> B = { 6, 7, 8, 9 };
+    vector<int> AB = A;
+    AB.insert(AB.end(), B.begin(), B.end());
+    print_vector(AB);
+
+
+
+    // --------- 2d vector 初始化 ---------
     int row_count = 3;
     int col_count = 5;
     // value default is 0
