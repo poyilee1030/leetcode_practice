@@ -11,6 +11,32 @@ class _1750_minimum_length_of_string_after_deleting_similar_ends
 public:
     int minimumLength(string s) {
         int n = s.size();
+        int l = 0, r = n - 1;
+        while (l < r) {
+            if (s[l] != s[r]) {
+                break;
+            }
+            // 先移動右邊
+            while (s[l] == s[r] && l < r) {
+                r--;
+            }
+            // 使得接下來的 s[l] == s[r] 可以繼續成立
+            r++;
+
+            // 調整左邊
+            while (s[l] == s[r] && l < r) {
+                l++;
+            }
+            
+            //把剛才做的 r++ 減回來
+            r--;
+        }
+        return max(0, r - l + 1);
+    }
+    
+    /*
+    int minimumLength(string s) {
+        int n = s.size();
         return helper(s, 0, n - 1);
     }
     
@@ -38,6 +64,7 @@ public:
             }
         }
     }
+    */
 
 	void do_test(_1750_minimum_length_of_string_after_deleting_similar_ends* sol) {
         int ret = sol->minimumLength("ca");
