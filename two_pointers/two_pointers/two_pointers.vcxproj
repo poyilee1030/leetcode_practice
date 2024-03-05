@@ -135,6 +135,7 @@
     <ClInclude Include="_0042_trapping_rain_water.h" />
     <ClInclude Include="_0127_valid_palindrome.h" />
     <ClInclude Include="_0167_two_sum_ii_input_array_is_sorted.h" />
+    <ClInclude Include="_1750_minimum_length_of_string_after_deleting_similar_ends.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -6,14 +6,16 @@
 #include "_0015_3sum.h"
 #include "_0127_valid_palindrome.h"
 #include "_0167_two_sum_ii_input_array_is_sorted.h"
+#include "_1750_minimum_length_of_string_after_deleting_similar_ends.h"
 
 int main()
 {
     //_0011_container_with_most_water sol;
-    _0042_trapping_rain_water sol;
+    //_0042_trapping_rain_water sol;
     //_0015_3sum sol;
     //_0127_valid_palindrome sol;
     //_0167_two_sum_ii_input_array_is_sorted sol;
+    _1750_minimum_length_of_string_after_deleting_similar_ends sol;
 
     sol.do_test(&sol);
 }
