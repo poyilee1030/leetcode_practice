@@ -39,4 +39,26 @@ void basic_string_operate() {
     tmp2.append(L, C);
     cout << "tmp2 = " << tmp2 << endl;
 
+    //--------------------------------------------------------------------------------------------------------
+
+    // 對兩個 string 使用 < operator 代表什麼?
+    // https://stackoverflow.com/questions/13829434/using-the-less-than-comparison-operator-for-strings
+    /*
+    The less-than operator on strings does a lexicographical comparison on the strings.
+    This compares strings in the same way that they would be listed in dictionary order, 
+    generalized to work for strings with non-letter characters.
+
+    For example:
+    "a" < "b"
+    "a" < "ab"
+    "A" < "a"             (Since A has ASCII value 65; a has a higher ASCII value)
+    "cat" < "caterpillar"
+    
+    For more information, 
+    look at the std::lexicographical_compare algorithm, 
+    which the less-than operator usually invokes.
+
+    As for -= and *=, neither of these operators are defined on strings. 
+    The only "arithmetic" operators defined are + and +=, which perform string concatenation.
+    */
 }

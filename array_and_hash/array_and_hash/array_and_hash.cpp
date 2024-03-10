@@ -30,6 +30,7 @@
 #include "_1980_find_unique_binary_string.h"
 #include "_2785_sort_vowels_in_a_string.h"
 #include "_2864_maximum_odd_binary_number.h"
+#include "_3076_shortest_uncommon_substring_in_an_array.h"
 
 
 int main()
@@ -64,7 +65,8 @@ int main()
     //_1930_unique_length_3_palindromic_subsequences sol;
     //_1980_find_unique_binary_string sol;
     //_2785_sort_vowels_in_a_string sol;
-    _2864_maximum_odd_binary_number sol;
+    //_2864_maximum_odd_binary_number sol;
+    _3076_shortest_uncommon_substring_in_an_array sol;
 
     sol.do_test(&sol);
 }

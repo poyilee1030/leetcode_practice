@@ -171,6 +171,7 @@
     <ClInclude Include="_1535_find_the_winner_of_an_array_game.h" />
     <ClInclude Include="_1759_count_number_of_homogenous_substrings.h" />
     <ClInclude Include="_2864_maximum_odd_binary_number.h" />
+    <ClInclude Include="_3076_shortest_uncommon_substring_in_an_array.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
