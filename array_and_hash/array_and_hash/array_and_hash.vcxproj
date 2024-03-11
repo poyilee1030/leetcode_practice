@@ -172,6 +172,7 @@
     <ClInclude Include="_1759_count_number_of_homogenous_substrings.h" />
     <ClInclude Include="_2864_maximum_odd_binary_number.h" />
     <ClInclude Include="_3076_shortest_uncommon_substring_in_an_array.h" />
+    <ClInclude Include="_0791_custom_sort_string.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
