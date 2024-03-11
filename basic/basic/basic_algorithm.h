@@ -5,40 +5,10 @@
 #include <string>
 #include <algorithm>
 
+#include "basic_vector.h"
+
 using namespace std;
 
-
-template <typename T>
-void print_vector(vector<T> v) {
-    cout << "[";
-    for (int i = 0; i < v.size(); i++) {
-        cout << v[i];
-        if (i < v.size() - 1) {
-            cout << ",";
-        }
-    }
-    cout << "]" << endl;
-}
-
-template <typename T>
-void print_vector_of_vector(vector<vector<T>> v) {
-    cout << "[";
-    for (auto j = 0; j < v.size(); j++) {
-        cout << "[";
-        vector<T> vt = v[j];
-        for (int i = 0; i < vt.size(); i++) {
-            cout << vt[i];
-            if (i < vt.size() - 1) {
-                cout << ",";
-            }
-        }
-        cout << "]";
-        if (j < v.size() - 1) {
-            cout << ", ";
-        }
-    }
-    cout << "]" << endl;
-}
 
 void example1() {
     vector<char> v = { 'b', 'a', 'A', 'B', '1', '0', '2' };
@@ -72,8 +42,42 @@ void example3() {
     print_vector_of_vector(vec);
 }
 
+class XYZ {
+    int custom_idx[26];
+public:
+    XYZ() {
+        // 自定義字母 a-z 排序順序
+        // 故意將 a, b 的順序顛倒，其他不變
+        for (int i = 0; i < 26; i++)
+            custom_idx[i] = i;
+
+        custom_idx[0] = 1;
+        custom_idx[1] = 0;
+    }
+    
+    void do_sort_test() {
+        string str = "xyzab";
+
+        sort(str.begin(), str.end());
+        // output: abxyz
+        cout << "original sort: " << str << endl;
+                                     // ↓加了 this 可以使用 member variable: custom_idx
+        sort(str.begin(), str.end(), [this](const char& m, const char& n) {
+                return custom_idx[m - 'a'] < custom_idx[n - 'a'];
+            });
+        // output: baxyz
+        cout << "custom sort: " << str << endl;
+    }
+};
+
+void example4() {
+    XYZ* xyz = new XYZ();
+    xyz->do_sort_test();
+}
+
 void basic_algorithm() {
     //example1();
     //example2();
-    example3();
+    //example3();
+    example4();
 }

@@ -51,11 +51,11 @@ int main()
     
     //basic_check();
 
-    //basic_algorithm();
+    basic_algorithm();
 
     //basic_bitwise();
 
-    basic_union_find();
+    //basic_union_find();
 
     cout << endl << "-------------------------------------------------------" << endl;
 }
