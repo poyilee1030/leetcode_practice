@@ -71,13 +71,39 @@ public:
 };
 
 void example4() {
+    cout << "example4::" << endl;
     XYZ* xyz = new XYZ();
     xyz->do_sort_test();
+}
+
+void example5() {
+    cout << "example5::" << endl;
+    int custom_idx[26];
+    // 自定義字母 a-z 排序順序
+    // 故意將 a, b 的順序顛倒，其他不變
+    for (int i = 0; i < 26; i++)
+        custom_idx[i] = i;
+
+    custom_idx[0] = 1;
+    custom_idx[1] = 0;
+
+    string str = "xyzab";
+
+    sort(str.begin(), str.end());
+    // output: abxyz
+    cout << "original sort: " << str << endl;
+                               // ↓加了 & 可以使用外面的 local variable: custom_idx
+    sort(str.begin(), str.end(), [&](const char& m, const char& n) {
+            return custom_idx[m - 'a'] < custom_idx[n - 'a'];
+        });
+    // output: baxyz
+    cout << "custom sort: " << str << endl;
 }
 
 void basic_algorithm() {
     //example1();
     //example2();
     //example3();
-    example4();
+    //example4();
+    example5();
 }
