@@ -9,19 +9,25 @@ using namespace std;
 
 class _0323_number_of_connected_components_in_an_undirected_graph
 {
-	unordered_map<int, int> Father;
+	//unordered_map<int, int> Father;
+	vector<int> Father;
 public:
 	int countComponents(int n, vector<vector<int>>& edges) {
+		Father.resize(n);
+		for (int i = 0; i < n; i++)
+			Father[i] = i;
 
 		int res = n;
 		for (auto edge : edges)
 		{
 			int a = edge[0];
 			int b = edge[1];
+			/*
 			if (Father.find(a) == Father.end())
 				Father[a] = a;
 			if (Father.find(b) == Father.end())
 				Father[b] = b;
+			*/
 
 			if (FindFather(a) == FindFather(b)) {
 

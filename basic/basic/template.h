@@ -50,7 +50,8 @@ void Union(int x, int y)
         Father[x] = y;
 }
 // initial Father before use, assign the value to itself
+/*
 Father.resize(n);
 for (int i = 0; i < n; i++)
     Father[i] = i;
-
+*/

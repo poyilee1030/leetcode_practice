@@ -29,14 +29,14 @@ int main()
     //_0210_course_schedule_ii sol;
     //_0261_graph_valid_tree sol;
     //_0286_walls_and_gates sol;
-    //_0323_number_of_connected_components_in_an_undirected_graph sol;
+    _0323_number_of_connected_components_in_an_undirected_graph sol;
     //_0417_pacific_atlantic_water_flow_bfs sol;
     //_0417_pacific_atlantic_water_flow_dfs sol;
     //_0684_redundant_connection sol;
     //_0695_max_area_of_island_bfs sol;
     //_0695_max_area_of_island_dfs sol;
     //_0994_rotting_oranges sol;
-    _1743_restore_the_array_from_adjacent_pairs sol;
+    //_1743_restore_the_array_from_adjacent_pairs sol;
 
     sol.do_test(&sol);
 }
