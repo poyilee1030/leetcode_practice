@@ -57,12 +57,12 @@ void basic_vector() {
     int max_idx = max_element(b.begin(), b.end()) - b.begin();
     cout << "max_idx = " << max_idx << endl;
 
-    // т vector い程竚 ( vector b ㄒ) 糶猭1
+    // т vector い程 ( vector b ㄒ) 糶猭1
     vector<int>::iterator it;
     it = max_element(b.begin(), b.end());
     cout << "max value (style 1) = " << *it << endl;
 
-    // т vector い程竚 ( vector b ㄒ) 糶猭2
+    // т vector い程 ( vector b ㄒ) 糶猭2
     cout << "max value (style 2) = " << *max_element(b.begin(), b.end()) << endl;
 
 
