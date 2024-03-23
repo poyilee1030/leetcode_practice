@@ -6,69 +6,98 @@
 #include "_0153_find_minimum_in_rotated_sorted_array.h"
 #include "_0704_binary_search.h"
 #include "_0875_koko_eating_bananas.h"
-#include "_0981_time_based_key_value_store.h"
+//#include "_0981_time_based_key_value_store.h"
 
 
-int main()
+int binary_search_template1(vector<int>& nums, int target)
 {
-    //_0033_search_in_rotated_sorted_array sol;
-    //_0074_search_a_2d_matrix sol;
-    //_0153_find_minimum_in_rotated_sorted_array sol;
-    //_0704_binary_search sol;
-    //_0875_koko_eating_bananas sol;
-    _0981_time_based_key_value_store sol;
-    
-    sol.do_test(&sol);
-}
-
-int binary_search_template1(vector<int> nums)
-{
-    // 如果題目有多個可行解, 而我們要找最大的可行解或最小的可行解
-    // 那用此模板會收斂在最佳解
-    int left = 1;
-    int right = nums.size();
+    // 要找 nums 裡第一個大於等於 target 的位置
+    // 那用此模板最後會收斂在最佳解 left == right
+    int left = 0;
+    int right = nums.size()-1;
     while (left < right) {
-        int x = right - (right - left) / 2;
-        int count = 0;
-        for (auto a : nums)
-            if (a >= x) count++;
+        int mid = left + (right - left) / 2;
 
-        if (count >= x)
-            left = x;
+        if (nums[mid] < target)
+            left = mid + 1;
         else
-            right = x - 1;
+            right = mid;
     }
-    int count = 0;
-    for (auto a : nums)
-        if (a >= left) count++;
-    if (count == left)
-        return left;
-    else
-        return -1;
+    cout << "left = " << left << ", nums[left] = " << nums[left] << endl;
+    return left;
 }
 
-int binary_search_template2(vector<int> nums)
+int binary_search_template2(vector<int>& nums, int target)
+{
+    // 要找 nums 裡最後一個小於等於 target 的位置
+    // 那用此模板最後會收斂在最佳解 left == right
+    int left = 0;
+    int right = nums.size()-1;
+    while (left < right) {
+        int mid = right - (right - left) / 2;
+
+        if (nums[mid] <= target)
+            left = mid;
+        else
+            right = mid - 1;
+    }
+    cout << "left = " << left << ", nums[left] = " << nums[left] << endl;
+    return left;
+}
+
+int binary_search_template3(vector<int>& nums, int target)
 {
     // 官神較不建議此寫法, 講解去 youtube 看下列題號
     // 1608. Special Array With X Elements Greater Than or Equal X
     // 當題目有解時必定只有一個解時就可以用以下寫法
-    int left = 1;
-    int right = nums.size();
+    int left = 0;
+    int right = nums.size()-1;
     while (left <= right) {
-        int x = right - (right - left) / 2;
-        int count = 0;
-        for (auto a : nums)
-            if (a >= x) count++;
+        int mid = (left + right) / 2;
 
-        if (count == x)
-            return x;
-        else if (count > x)
-            left = x + 1;
+        if (nums[mid] == target) {
+            cout << "mid = " << mid << ", nums[mid] = " << nums[mid] << endl;
+            return mid;
+        }
+        else if (target > mid)
+            left = mid + 1;
         else
-            right = x - 1;
+            right = mid - 1;
     }
+    // left 會跑出最後一個 index, nums[left] will crash
+    //cout << "left = " << left << ", nums[left] = " << nums[left] << endl;
+    //cout << "right = " << right << ", nums[right] = " << nums[right] << endl;
     return -1;
 }
+
+
+int main()
+{
+    vector<int> q = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 20, 21 };
+    // vector<int> q = { 20, 21 };
+    // vector<int> q = { 0, 1, 2, 3, 4, 5 };
+    // 假設現在目標是找到第一個大於等於目標(10)的位置，答案應該是 idx = 9, q[9] = 20
+    int target = 19;
+    int ret = binary_search_template1(q, target);
+
+    // 假設現在目標是找到最後一個小於等於目標的位置，答案應該是 idx = 8, q[8] = 8
+    ret = binary_search_template2(q, target);
+
+    // 如果 q 裡面剛好有 target 會返回其 idx，若無找到則 return -1;
+    ret = binary_search_template3(q, target);
+    
+    cout << "#####################################" << endl;
+    
+    //_0033_search_in_rotated_sorted_array sol;
+    //_0074_search_a_2d_matrix sol;
+    //_0153_find_minimum_in_rotated_sorted_array sol;
+    //_0704_binary_search sol;
+    _0875_koko_eating_bananas sol;
+    //_0981_time_based_key_value_store sol;
+    
+    sol.do_test(&sol);
+}
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
