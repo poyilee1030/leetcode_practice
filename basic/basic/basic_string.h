@@ -19,7 +19,11 @@ void basic_string_operate() {
     string tt = to_string(bb);
 
     string ssss = "123456789";
-    
+    //                  ¡õ start idx 
+    cout << ssss.substr(2, 3) << endl;
+    //                     ¡ô length
+    // output = 345
+    cout << "############################" << endl;
     int l = 0;
     int wsize = 3;
     while (l < ssss.size()-wsize+1) {
