@@ -10,7 +10,7 @@
 using namespace std;
 
 
-void example1() {
+void algo_example1() {
     vector<char> v = { 'b', 'a', 'A', 'B', '1', '0', '2' };
     sort(v.begin(), v.end(), greater<>());
     print_vector(v);
@@ -18,7 +18,7 @@ void example1() {
     print_vector(v);
 }
 
-void example2() {
+void algo_example2() {
     vector<vector<int>> vec = { {3, 1, 3},{1, 2, 2},{0, 3, 3} };
 
     sort(vec.begin(), vec.end(),
@@ -34,7 +34,7 @@ static bool cmp(vector<int>& a, vector<int>& b)
     return a[2] < b[2];
 }
 
-void example3() {
+void algo_example3() {
     vector<vector<int>> vec = { {3, 1, 3},{1, 2, 2},{0, 3, 3} };
 
     sort(vec.begin(), vec.end(), cmp);
@@ -70,13 +70,13 @@ public:
     }
 };
 
-void example4() {
+void algo_example4() {
     cout << "example4::" << endl;
     XYZ* xyz = new XYZ();
     xyz->do_sort_test();
 }
 
-void example5() {
+void algo_example5() {
     cout << "example5::" << endl;
     int custom_idx[26];
     // 自定義字母 a-z 排序順序
@@ -101,9 +101,9 @@ void example5() {
 }
 
 void basic_algorithm() {
-    //example1();
-    //example2();
-    //example3();
-    //example4();
-    example5();
+    //algo_example1();
+    //algo_example2();
+    //algo_example3();
+    //algo_example4();
+    algo_example5();
 }

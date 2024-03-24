@@ -22,8 +22,8 @@ int main()
     //_0136_single_number sol;
     //_0190_reverse_bits sol;
     //_0191_number_of_1_bits sol;
-    _0201_bitwise_and_of_numbers_range sol;
-    //_0268_missing_number sol;
+    //_0201_bitwise_and_of_numbers_range sol;
+    _0268_missing_number sol;
     //_0338_counting_bits sol;
     //_0342_power_of_four sol;
     //_0371_sum_of_two_integers sol;

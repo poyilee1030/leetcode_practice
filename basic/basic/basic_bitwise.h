@@ -4,9 +4,7 @@
 
 using namespace std;
 
-
-void basic_bitwise()
-{
+void bb_example1() {
 	/*
 	0xaaaaaaaa = 10101010101010101010101010101010 (案计1 计0)
 	0x55555555 = 01010101010101010101010101010101 (案计0 计1)
@@ -23,4 +21,9 @@ void basic_bitwise()
 	int e = 1;
 	int f = 2;
 	int g = 3;
+}
+
+void basic_bitwise()
+{
+	bb_example1();
 }

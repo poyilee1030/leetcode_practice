@@ -12,6 +12,22 @@ public:
 	int lengthOfLIS(vector<int>& nums) {
 		int n = nums.size();
 		vector<int> dp(n, 1);
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < i; j++) {
+				if (nums[i] > nums[j])
+					dp[i] = max(dp[i], dp[j] + 1);
+			}
+		}
+		int ans = 0;
+		for (int i = 0; i < n; i++) {
+			ans = max(ans, dp[i]);
+		}
+		return ans;
+	}
+	/*
+	int lengthOfLIS(vector<int>& nums) {
+		int n = nums.size();
+		vector<int> dp(n, 1);
 		int result = 1;
 		for (int i = n - 1; i >= 0; i--)
 		{
@@ -26,6 +42,7 @@ public:
 		}
 		return result;
 	}
+	*/
 
 	void do_test(_0300_longest_increasing_subsequence* sol)
 	{

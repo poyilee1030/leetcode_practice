@@ -39,7 +39,7 @@ int main()
 
     //basic_queue();
 
-    basic_string_operate();
+    //basic_string_operate();
 
     //basic_unordered_map();
 
@@ -53,7 +53,7 @@ int main()
 
     //basic_algorithm();
 
-    //basic_bitwise();
+    basic_bitwise();
 
     //basic_union_find();
 

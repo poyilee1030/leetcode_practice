@@ -33,6 +33,7 @@
 #include "_2785_sort_vowels_in_a_string.h"
 #include "_2864_maximum_odd_binary_number.h"
 #include "_3076_shortest_uncommon_substring_in_an_array.h"
+#include "_3090_maximum_length_substring_with_two_occurrences.h"
 
 
 int main()
@@ -55,7 +56,7 @@ int main()
     //_0347_top_k_frequent_elements sol;
     //_0392_is_subsequence sol;
     //_0791_custom_sort_string sol;
-    _0912_sort_an_array sol;
+    //_0912_sort_an_array sol;
     //_0929_unique_email_addresses sol;
     //_1074_number_of_submatrices_that_sum_to_targe sol;
     //_1160_find_words_that_can_be_formed_by_characters sol;
@@ -71,6 +72,8 @@ int main()
     //_2785_sort_vowels_in_a_string sol;
     //_2864_maximum_odd_binary_number sol;
     //_3076_shortest_uncommon_substring_in_an_array sol;
+    _3090_maximum_length_substring_with_two_occurrences sol;
+    
 
     sol.do_test(&sol);
 }

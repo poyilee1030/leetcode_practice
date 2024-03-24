@@ -24,12 +24,35 @@ class _0268_missing_number
 public:
 	int missingNumber(vector<int>& nums) {
 		int n = nums.size();
+		int result = 0;
+		for (int i = 0; i <= n; i++) {
+			result ^= i;
+		}
+		for (int i = 0; i < n; i++) {
+			result ^= nums[i];
+		}
+		return result;
+	}
+
+	/*
+	int missingNumber(vector<int>& nums) {
+		int n = nums.size();
+
+		// 原本
+		// int result = 0;
+		// for (int i = 0; i <= n; i++) {
+		// 	   result ^= i;
+		// }
+		// 從 i = 0 ~ n-1 可以整合到下面的 for loop
+		// 所以 result 一開始要設成 n
+
 		int result = n;
 		for (int i = 0; i < n; i++) {
 			result ^= i ^ nums[i];
 		}
 		return result;
 	}
+	*/
 
 	void do_test(_0268_missing_number* sol) {
 		vector<int> nums1 = { 3, 0, 1 };
