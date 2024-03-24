@@ -25,8 +25,8 @@ int main()
     //_0141_linked_list_cycle sol;
     //_0143_reorder_list sol;
     //_0146_lru_cache sol(2);
-    _0206_reverse_linked_list sol;
-    //_0287_find_the_duplicate_number sol;
+    //_0206_reverse_linked_list sol;
+    _0287_find_the_duplicate_number sol;
 
     sol.do_test(&sol);
 }
