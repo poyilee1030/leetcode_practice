@@ -93,19 +93,21 @@ public:
     */
 
 	void do_test(_1074_number_of_submatrices_that_sum_to_targe* sol) {
-        vector<vector<int>> matrix1 = { {0, 1, 0}, {1, 1, 1}, {0, 1, 0} };
-        int ret1 = sol->numSubmatrixSumTarget(matrix1, 0);
-        cout << ret1 << endl;
+        vector<vector<int>> matrix;
+        int ret;
+        matrix = { {0, 1, 0}, {1, 1, 1}, {0, 1, 0} };
+        ret = sol->numSubmatrixSumTarget(matrix, 0);
+        cout << ret << endl;
         // Output : 4
         
-        vector<vector<int>> matrix2 = { {1, -1}, {-1, 1} };
-        int ret2 = sol->numSubmatrixSumTarget(matrix2, 0);
-        cout << ret2 << endl;
+        matrix = { {1, -1}, {-1, 1} };
+        ret = sol->numSubmatrixSumTarget(matrix, 0);
+        cout << ret << endl;
         // Output : 5
 
-        vector<vector<int>> matrix3 = { {904} };
-        int ret3 = sol->numSubmatrixSumTarget(matrix3, 0);
-        cout << ret3 << endl;
+        matrix = { {904} };
+        ret = sol->numSubmatrixSumTarget(matrix, 0);
+        cout << ret << endl;
         // Output : 0
 	}
 };

@@ -61,14 +61,9 @@ public:
             Since "d" does not appear in order, it can be at any position in the returned string.
             "dcba", "cdba", "cbda" are also valid outputs.
         */
-        
 
         string ret2 = sol->customSortString("bcafg", "abcd");
         cout << ret2 << endl;
-
         // Output : "bcad"
 	}
 };
-
-
-

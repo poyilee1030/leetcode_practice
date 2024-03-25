@@ -37,15 +37,18 @@ public:
 
 	void do_test(_0128_longest_consecutive_sequence *sol)
 	{
-		vector<int> nums1 = { 100, 4, 200, 1, 3, 2 };
-		int ret1 = sol->longestConsecutive(nums1);
-		cout << ret1 << endl;
+		vector<int> nums;
+		int ret;
+
+		nums = { 100, 4, 200, 1, 3, 2 };
+		ret = sol->longestConsecutive(nums);
+		cout << ret << endl;
 		//Output : 4
 		//Explanation : The longest consecutive elements sequence is[1, 2, 3, 4].Therefore its length is 4.
 		
-		vector<int> nums2 = { 0, 3, 7, 2, 5, 8, 4, 6, 0, 1 };
-		int ret2 = sol->longestConsecutive(nums2);
-		cout << ret2 << endl;
+		nums = { 0, 3, 7, 2, 5, 8, 4, 6, 0, 1 };
+		ret = sol->longestConsecutive(nums);
+		cout << ret << endl;
 		//Output : 9
 	}
 };

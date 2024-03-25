@@ -73,14 +73,16 @@ public:
 
 	void do_test(_0014_longest_common_prefix* sol)
 	{
-        vector<string> strs1 = { "flower", "flow", "flight" };
-        string ret1 = sol->longestCommonPrefix(strs1);
-        cout << ret1 << endl;
+        vector<string> strs;
+        string ret;
+        strs = { "flower", "flow", "flight" };
+        ret = sol->longestCommonPrefix(strs);
+        cout << ret << endl;
         // Output : "fl"
         
-        vector<string> strs2 = { "dog", "racecar", "car" };
-        string ret2 = sol->longestCommonPrefix(strs2);
-        cout << ret2 << endl;
+        strs = { "dog", "racecar", "car" };
+        ret = sol->longestCommonPrefix(strs);
+        cout << ret << endl;
         // Output : ""
         // Explanation : There is no common prefix among the input strings.
 	}

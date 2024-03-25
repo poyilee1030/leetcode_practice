@@ -37,8 +37,11 @@ public:
 	}
 
 	void do_test(_0036_valid_sudoku* sol) {
-		// "." is not a char, must use '.' to represent a dot
-		vector<vector<char>> board1 =
+		vector<vector<char>> board;
+		bool ret;
+		
+		// "." is a string, not a char, must use '.' to represent a dot
+		board =
 		{ {'5', '3', '.', '.', '7', '.', '.', '.', '.'}
 		, {'6', '.', '.', '1', '9', '5', '.', '.', '.'}
 		, {'.', '9', '8', '.', '.', '.', '.', '6', '.'}
@@ -48,11 +51,11 @@ public:
 		, {'.', '6', '.', '.', '.', '.', '2', '8', '.'}
 		, {'.', '.', '.', '4', '1', '9', '.', '.', '5'}
 		, {'.', '.', '.', '.', '8', '.', '.', '7', '9'} };
-		bool ret1 = sol->isValidSudoku(board1);
-		cout << ret1 << endl;
+		ret = sol->isValidSudoku(board);
+		cout << ret << endl;
 		//Output: true
 
-		vector<vector<char>> board2 =
+		board =
 		{ {'8', '3', '.', '.', '7', '.', '.', '.', '.'}
 		, {'6', '.', '.', '1', '9', '5', '.', '.', '.'}
 		, {'.', '9', '8', '.', '.', '.', '.', '6', '.'}
@@ -62,8 +65,8 @@ public:
 		, {'.', '6', '.', '.', '.', '.', '2', '8', '.'}
 		, {'.', '.', '.', '4', '1', '9', '.', '.', '5'}
 		, {'.', '.', '.', '.', '8', '.', '.', '7', '9'} };
-		bool ret2 = sol->isValidSudoku(board2);
-		cout << ret2 << endl;
+		ret = sol->isValidSudoku(board);
+		cout << ret << endl;
 		//Output: false
 	}
 };

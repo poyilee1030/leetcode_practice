@@ -42,27 +42,25 @@ public:
     */
 
 	void do_test(_0058_length_of_last_word* sol) {
-        string s1 = "Hello World";
-        int ret1 = sol->lengthOfLastWord(s1);
-        cout << ret1 << endl;
+        int ret;
+
+        ret = sol->lengthOfLastWord("Hello World");
+        cout << ret << endl;
         // Output : 5
         // Explanation : The last word is "World" with length 5.
         
-        string s2 = "   fly me   to   the moon  ";
-        int ret2 = sol->lengthOfLastWord(s2);
-        cout << ret2 << endl;
+        ret = sol->lengthOfLastWord("   fly me   to   the moon  ");
+        cout << ret << endl;
         // Output : 4
         // Explanation : The last word is "moon" with length 4.
 
-        string s3 = "luffy is still joyboy";
-        int ret3 = sol->lengthOfLastWord(s3);
-        cout << ret3 << endl;
+        ret = sol->lengthOfLastWord("luffy is still joyboy");
+        cout << ret << endl;
         // Output : 6
         // Explanation : The last word is "joyboy" with length 6.
 
-        string s4 = " a";
-        int ret4 = sol->lengthOfLastWord(s4);
-        cout << ret4 << endl;
+        ret = sol->lengthOfLastWord(" a");
+        cout << ret << endl;
         // Output : 1
 	}
 };

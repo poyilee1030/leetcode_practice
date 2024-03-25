@@ -11,16 +11,13 @@ using namespace std;
 class _0001_two_sum
 {
 public:
-    vector<int> twoSum(vector<int>& nums, int target)
-    {
+    vector<int> twoSum(vector<int>& nums, int target) {
         int n = nums.size();
         unordered_map<int, int> mp; // val -> index
 
-        for (int i = 0; i < n; i++)
-        {
+        for (int i = 0; i < n; i++) {
             int compliment = target - nums[i];
-            if (mp.find(compliment) != mp.end())
-            {
+            if (mp.find(compliment) != mp.end()) {
                 return { mp[compliment], i };
             }
             mp.insert({ nums[i], i });
@@ -28,24 +25,22 @@ public:
         return {};
     }
 
-    void do_test(_0001_two_sum *sol)
-    {
-        vector<int> nums1 = { 2, 7, 11, 15 };
-        int target1 = 9;
-        vector<int> ret1 = sol->twoSum(nums1, target1);
+    void do_test(_0001_two_sum *sol) {
+        vector<int> nums;
+        vector<int> ret;
+        nums = { 2, 7, 11, 15 };
+        ret = sol->twoSum(nums, 9);
         //Output: [0, 1]
-        print_vector(ret1);
+        print_vector(ret);
 
-        vector<int> nums2 = { 3, 2, 4 };
-        int target2 = 6;
-        vector<int> ret2 = sol->twoSum(nums2, target2);
+        nums = { 3, 2, 4 };
+        ret = sol->twoSum(nums, 6);
         //Output: [1, 2]
-        print_vector(ret2);
+        print_vector(ret);
 
-        vector<int> nums3 = { 3, 3 };
-        int target3 = 6;
-        vector<int> ret3 = sol->twoSum(nums3, target3);
+        nums = { 3, 3 };
+        ret = sol->twoSum(nums, 6);
         //Output: [0, 1]
-        print_vector(ret3);
+        print_vector(ret);
     }
 };

@@ -56,9 +56,9 @@ int main()
     //_0271_encode_and_decode_strings sol;
     //_0347_top_k_frequent_elements sol;
     //_0392_is_subsequence sol;
-    _0442_find_all_duplicates_in_an_array sol;
+    //_0442_find_all_duplicates_in_an_array sol;
     //_0791_custom_sort_string sol;
-    //_0912_sort_an_array sol;
+    _0912_sort_an_array sol;
     //_0929_unique_email_addresses sol;
     //_1074_number_of_submatrices_that_sum_to_targe sol;
     //_1160_find_words_that_can_be_formed_by_characters sol;

@@ -49,16 +49,19 @@ public:
 
     void do_test(_0049_group_anagrams* sol)
     {
-        vector<string> strs1 = { "eat", "tea", "tan", "ate", "nat", "bat" };
-        vector<vector<string>> ret1 = sol->groupAnagrams(strs1);
-        print_vector_of_vector(ret1);
+        vector<string> strs;
+        vector<vector<string>> ret;
 
-        vector<string> strs2 = { "" };
-        vector<vector<string>> ret2 = sol->groupAnagrams(strs2);
-        print_vector_of_vector(ret2);
+        strs = { "eat", "tea", "tan", "ate", "nat", "bat" };
+        ret = sol->groupAnagrams(strs);
+        print_vector_of_vector(ret);
 
-        vector<string> strs3 = { "a" };
-        vector<vector<string>> ret3 = sol->groupAnagrams(strs3);
-        print_vector_of_vector(ret3);
+        strs = { "" };
+        ret = sol->groupAnagrams(strs);
+        print_vector_of_vector(ret);
+
+        strs = { "a" };
+        ret = sol->groupAnagrams(strs);
+        print_vector_of_vector(ret);
     }
 };

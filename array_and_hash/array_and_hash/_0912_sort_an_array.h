@@ -99,20 +99,4 @@ public:
         print_vector(ret2);
         // Output : [0, 0, 1, 1, 2, 5]
 	}
-
-    template <typename T>
-    void print_vector(vector<T> v) {
-        cout << "[";
-        for (int i = 0; i < v.size(); i++) {
-            cout << v[i];
-            if (i < v.size() - 1) {
-                cout << ",";
-            }
-        }
-        cout << "]" << endl;
-    }
 };
-
-
-
-

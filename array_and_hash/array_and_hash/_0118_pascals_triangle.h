@@ -33,14 +33,13 @@ public:
 
 	void do_test(_0118_pascals_triangle* sol)
 	{
-		int numRows1 = 5;
-		vector<vector<int>> ret1 = sol->generate(numRows1);
-		print_vector_of_vector(ret1);
+		vector<vector<int>> ret;
+		ret = sol->generate(5);
+		print_vector_of_vector(ret);
 		// Output : [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
 		
-		int numRows2 = 1;
-		vector<vector<int>> ret2 = sol->generate(numRows2);
-		print_vector_of_vector(ret2);
+		ret = sol->generate(1);
+		print_vector_of_vector(ret);
 		// Output : [[1]]
 	}
 };
