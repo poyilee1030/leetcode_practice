@@ -13,10 +13,13 @@ public:
         int n = s.length();
 
         int ptr = n - 1;
-        while (ptr >= 0 && s[ptr] == ' ') ptr--; /* Skip the trailing whitespaces */
+        while (ptr >= 0 && s[ptr] == ' ') 
+            ptr--; /* Skip the trailing whitespaces */
 
         int len = 0;
-        while (ptr >= 0 && s[ptr--] != ' ') len++; /* Counting the letters in the last word */
+        while (ptr >= 0 && s[ptr--] != ' ') 
+            len++; /* Counting the letters in the last word */
+
         return len;
     }
 
@@ -38,8 +41,7 @@ public:
     }
     */
 
-	void do_test(_0058_length_of_last_word* sol)
-	{
+	void do_test(_0058_length_of_last_word* sol) {
         string s1 = "Hello World";
         int ret1 = sol->lengthOfLastWord(s1);
         cout << ret1 << endl;

@@ -5,14 +5,14 @@
 
 using namespace std;
 
+
 class _0392_is_subsequence
 {
 public:
 	bool isSubsequence(string s, string t) {
 		int start = 0;
 		string tmp = t;
-		for (auto c : s)
-		{
+		for (auto c : s) {
 			tmp = tmp.substr(start, tmp.size());
 			if (tmp.size() == 0)
 				return false;
@@ -23,8 +23,7 @@ public:
 		return true;
 	}
 
-	void do_test(_0392_is_subsequence* sol)
-	{
+	void do_test(_0392_is_subsequence* sol) {
 		string s0 = "aaaaaa";
 		string t0 = "bbaaaa";
 		bool ret0 = sol->isSubsequence(s0, t0);
@@ -44,5 +43,3 @@ public:
 		// Output : false
 	}
 };
-
-

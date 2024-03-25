@@ -14,29 +14,26 @@ anagram ©ö¦ìºcµü
 class _0242_valid_anagram
 {
 public:
-    bool isAnagram(string s, string t)
-    {
+    bool isAnagram(string s, string t) {
         if (s.size() != t.size()) 
             return false;
 
         unordered_map<char, int> smap;
         unordered_map<char, int> tmap;
 
-        for (unsigned int i = 0; i < s.size(); i++)
-        {
+        for (unsigned int i = 0; i < s.size(); i++) {
             smap[s[i]]++;
             tmap[t[i]]++;
         }
 
-        for (unsigned int i = 0; i < smap.size(); i++)
-        {
-            if (smap[i] != tmap[i]) return false;
+        for (unsigned int i = 0; i < smap.size(); i++) {
+            if (smap[i] != tmap[i]) 
+                return false;
         }
         return true;
     }
 
-    void do_test(_0242_valid_anagram *sol)
-    {
+    void do_test(_0242_valid_anagram *sol) {
         string s1 = "anagram";
         string t1 = "nagaram";
         bool ret1 = sol->isAnagram(s1, t1);

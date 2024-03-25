@@ -20,20 +20,19 @@ class _0271_encode_and_decode_strings
 public:
     // Encodes a list of strings to a single string.
     string encode(vector<string>& strs) {
+        
         string result = "";
-
         for (int i = 0; i < strs.size(); i++) {
             string str = strs[i];
             result += to_string(str.size()) + "#" + str;
         }
-
         return result;
     }
 
     // Decodes a single string to a list of strings.
     vector<string> decode(string s) {
+        
         vector<string> result;
-
         int i = 0;
         while (i < s.size()) {
             int j = i;
@@ -45,7 +44,6 @@ public:
             result.push_back(str);
             i = j + 1 + length;
         }
-
         return result;
     }
 
@@ -76,16 +74,6 @@ public:
         vector<string> dummy_input3 = { "*tg,,~{A^", "qP_T,xL_", "C2-1#67%=" };
         string encoded_msg3 = sol->encode(dummy_input3);
         vector<string> decoded_msg3 = sol->decode(encoded_msg3);
-        print_result(decoded_msg3);
+        print_vector(decoded_msg3);
 	}
-
-    void print_result(vector<string> res)
-    {
-        cout << "[";
-        for (int i = 0; i < res.size(); ++i)
-        {
-            cout << res[i] << ",";
-        }
-        cout << "]" << endl;
-    }
 };

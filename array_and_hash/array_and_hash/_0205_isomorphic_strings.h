@@ -23,8 +23,7 @@ public:
         return true;
     }
 
-	void do_test(_0205_isomorphic_strings* sol)
-	{
+	void do_test(_0205_isomorphic_strings* sol) {
         string s1 = "egg";
         string t1 = "add";
         bool ret1 = sol->isIsomorphic(s1, t1);
@@ -50,4 +49,3 @@ public:
         // Output : true
 	}
 };
-

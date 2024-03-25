@@ -16,6 +16,7 @@
 #include "_0271_encode_and_decode_strings.h"
 #include "_0347_top_k_frequent_elements.h"
 #include "_0392_is_subsequence.h"
+#include "_0442_find_all_duplicates_in_an_array.h"
 #include "_0791_custom_sort_string.h"
 #include "_0912_sort_an_array.h"
 #include "_0929_unique_email_addresses.h"
@@ -55,6 +56,7 @@ int main()
     //_0271_encode_and_decode_strings sol;
     //_0347_top_k_frequent_elements sol;
     //_0392_is_subsequence sol;
+    _0442_find_all_duplicates_in_an_array sol;
     //_0791_custom_sort_string sol;
     //_0912_sort_an_array sol;
     //_0929_unique_email_addresses sol;
@@ -72,7 +74,7 @@ int main()
     //_2785_sort_vowels_in_a_string sol;
     //_2864_maximum_odd_binary_number sol;
     //_3076_shortest_uncommon_substring_in_an_array sol;
-    _3090_maximum_length_substring_with_two_occurrences sol;
+    //_3090_maximum_length_substring_with_two_occurrences sol;
     
 
     sol.do_test(&sol);

@@ -19,13 +19,10 @@ unordered_set 的實作方式通常是用雜湊表(hash table)實作的，
 class _0217_contains_duplicate
 {
 public:
-	bool containsDuplicate(vector<int>& nums)
-	{
+	bool containsDuplicate(vector<int>& nums) {
         unordered_set<int> s;
-        for (unsigned int i = 0; i < nums.size(); i++)
-        {
-            if (s.find(nums[i]) != s.end())
-            {
+        for (unsigned int i = 0; i < nums.size(); i++) {
+            if (s.find(nums[i]) != s.end()) {
                 return true;
             }
             s.insert(nums[i]);
@@ -33,8 +30,7 @@ public:
         return false;
 	}
 
-    void do_test(_0217_contains_duplicate *sol)
-    {
+    void do_test(_0217_contains_duplicate *sol) {
         vector<int> nums1 = { 1, 2, 3, 1 };
         vector<int> nums2 = { 1, 2, 3, 4 };
         vector<int> nums3 = { 1, 1, 1, 3, 3, 4, 3, 2, 4, 2 };

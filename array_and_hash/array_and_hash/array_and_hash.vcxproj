@@ -142,6 +142,8 @@
     <ClCompile Include="array_and_hash.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="utils.h" />
+    <ClInclude Include="_0442_find_all_duplicates_in_an_array.h" />
     <ClInclude Include="_0912_sort_an_array.h" />
     <ClInclude Include="_1074_number_of_submatrices_that_sum_to_targe.h" />
     <ClInclude Include="_1160_find_words_that_can_be_formed_by_characters.h" />

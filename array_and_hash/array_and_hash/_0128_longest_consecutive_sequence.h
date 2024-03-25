@@ -31,7 +31,6 @@ public:
 					++length;
 				longest = max(longest, length);
 			}
-
 		}
 		return longest;
 	}
@@ -44,11 +43,9 @@ public:
 		//Output : 4
 		//Explanation : The longest consecutive elements sequence is[1, 2, 3, 4].Therefore its length is 4.
 		
-
 		vector<int> nums2 = { 0, 3, 7, 2, 5, 8, 4, 6, 0, 1 };
 		int ret2 = sol->longestConsecutive(nums2);
 		cout << ret2 << endl;
 		//Output : 9
 	}
 };
-

@@ -5,11 +5,11 @@
 
 using namespace std;
 
+
 class _0036_valid_sudoku
 {
 public:
-	bool isValidSudoku(vector<vector<char>>& board)
-	{
+	bool isValidSudoku(vector<vector<char>>& board) {
 		const int cnt = 9;
 		bool row[cnt][cnt] = { false };
 		bool col[cnt][cnt] = { false };
@@ -36,8 +36,7 @@ public:
 		return true;
 	}
 
-	void do_test(_0036_valid_sudoku* sol)
-	{
+	void do_test(_0036_valid_sudoku* sol) {
 		// "." is not a char, must use '.' to represent a dot
 		vector<vector<char>> board1 =
 		{ {'5', '3', '.', '.', '7', '.', '.', '.', '.'}
@@ -66,10 +65,5 @@ public:
 		bool ret2 = sol->isValidSudoku(board2);
 		cout << ret2 << endl;
 		//Output: false
-
 	}
 };
-
-
-
-

@@ -2,28 +2,15 @@
 
 #include <vector>
 #include <string>
+#include "utils.h"
 
 using namespace std;
-
-
-template <typename T>
-void print_vector(vector<T> v) {
-    cout << "[";
-    for (int i = 0; i < v.size(); i++) {
-        cout << v[i];
-        if (i < v.size() - 1) {
-            cout << ",";
-        }
-    }
-    cout << "]" << endl;
-}
 
 
 class _3076_shortest_uncommon_substring_in_an_array
 {
 public:
     vector<string> shortestSubstrings(vector<string>& arr) {
-
         const int n = arr.size();
         vector<string> answer(n);
         for (int i = 0; i < n; ++i) {
@@ -55,7 +42,3 @@ public:
         // Output : ["","","abcd"]
 	}
 };
-
-
-
-

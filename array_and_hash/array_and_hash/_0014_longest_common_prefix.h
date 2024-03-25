@@ -78,7 +78,6 @@ public:
         cout << ret1 << endl;
         // Output : "fl"
         
-
         vector<string> strs2 = { "dog", "racecar", "car" };
         string ret2 = sol->longestCommonPrefix(strs2);
         cout << ret2 << endl;
