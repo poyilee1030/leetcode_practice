@@ -6,6 +6,7 @@
 #include "_0252_meeting_rooms.h"
 #include "_0253_meeting_rooms_ii.h"
 #include "_0435_non_overlapping_intervals.h"
+#include "_0919_lintcode_meeting_rooms_ii.h"
 #include "_1235_maximum_profit_in_job_scheduling.h"
 #include "_1851_minimum_interval_to_include_each_query.h"
 
@@ -16,7 +17,8 @@ int main()
     //_0252_meeting_rooms sol;
     //_0253_meeting_rooms_ii sol;
     //_0435_non_overlapping_intervals sol;
-    _1235_maximum_profit_in_job_scheduling sol;
+    _0919_lintcode_meeting_rooms_ii sol;
+    //_1235_maximum_profit_in_job_scheduling sol;
     //_1851_minimum_interval_to_include_each_query sol;
 
     sol.do_test(&sol);

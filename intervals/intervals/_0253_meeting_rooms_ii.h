@@ -73,21 +73,22 @@ public:
 	
 
 	void do_test(_0253_meeting_rooms_ii* sol) {
+		vector<vector<int>> intervals;
+		int ret;
 
-		vector<vector<int>> intervals1 = { {0, 30}, {5, 10}, {15, 20} };
-		int ret1 = sol->minMeetingRooms(intervals1);
-		cout << ret1 << endl;
+		intervals = { {0, 30}, {5, 10}, {15, 20} };
+		ret = sol->minMeetingRooms(intervals);
+		cout << ret << endl;
 		// Output : 2
 		
-
-		vector<vector<int>> intervals2 = { {7, 10}, {2, 4} };
-		int ret2 = sol->minMeetingRooms(intervals2);
-		cout << ret2 << endl;
+		intervals = { {7, 10}, {2, 4} };
+		ret = sol->minMeetingRooms(intervals);
+		cout << ret << endl;
 		// Output : 1
 
-		vector<vector<int>> intervals3 = { {13, 15}, {1, 13}, {6, 9} };
-		int ret3 = sol->minMeetingRooms(intervals3);
-		cout << ret3 << endl;
+		intervals = { {13, 15}, {1, 13}, {6, 9} };
+		ret = sol->minMeetingRooms(intervals);
+		cout << ret << endl;
 		// Output : 2
 	}
 };
