@@ -130,6 +130,7 @@
     <ClCompile Include="math_and_geometry.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="utils.h" />
     <ClInclude Include="_0043_multiply_strings.h" />
     <ClInclude Include="_0048_rotate_image.h" />
     <ClInclude Include="_0050_powx_n.h" />
