@@ -34,6 +34,7 @@ public:
 	void do_test(_0118_pascals_triangle* sol)
 	{
 		vector<vector<int>> ret;
+
 		ret = sol->generate(5);
 		print_vector_of_vector(ret);
 		// Output : [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]

@@ -24,28 +24,22 @@ public:
     }
 
 	void do_test(_0205_isomorphic_strings* sol) {
-        string s1 = "egg";
-        string t1 = "add";
-        bool ret1 = sol->isIsomorphic(s1, t1);
-        cout << ret1 << endl;
+        bool ret;
+
+        ret = sol->isIsomorphic("egg", "add");
+        cout << ret << endl;
         // Output : true
         
-        string s2 = "foo";
-        string t2 = "bar";
-        bool ret2 = sol->isIsomorphic(s2, t2);
-        cout << ret2 << endl;
+        ret = sol->isIsomorphic("foo", "bar");
+        cout << ret << endl;
         // Output : false
         
-        string s3 = "paper";
-        string t3 = "title";
-        bool ret3 = sol->isIsomorphic(s3, t3);
-        cout << ret3 << endl;
+        ret = sol->isIsomorphic("paper", "title");
+        cout << ret << endl;
         // Output : true
 
-        string s4 = "12";
-        string t4 = "\u0067\u0067";
-        bool ret4 = sol->isIsomorphic(s4, t4);
-        cout << ret4 << endl;
+        ret = sol->isIsomorphic("12", "\u0067\u0067");
+        cout << ret << endl;
         // Output : true
 	}
 };

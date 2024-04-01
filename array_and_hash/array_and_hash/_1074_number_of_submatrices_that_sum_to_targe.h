@@ -95,6 +95,7 @@ public:
 	void do_test(_1074_number_of_submatrices_that_sum_to_targe* sol) {
         vector<vector<int>> matrix;
         int ret;
+
         matrix = { {0, 1, 0}, {1, 1, 1}, {0, 1, 0} };
         ret = sol->numSubmatrixSumTarget(matrix, 0);
         cout << ret << endl;

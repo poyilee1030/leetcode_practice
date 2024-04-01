@@ -31,14 +31,19 @@ public:
 	}
 
     void do_test(_0217_contains_duplicate *sol) {
-        vector<int> nums1 = { 1, 2, 3, 1 };
-        vector<int> nums2 = { 1, 2, 3, 4 };
-        vector<int> nums3 = { 1, 1, 1, 3, 3, 4, 3, 2, 4, 2 };
-        int ret1 = sol->containsDuplicate(nums1);
-        cout << ret1 << endl;
-        int ret2 = sol->containsDuplicate(nums2);
-        cout << ret2 << endl;
-        int ret3 = sol->containsDuplicate(nums3);
-        cout << ret3 << endl;
+        vector<int> nums;
+        int ret;
+        
+        nums = { 1, 2, 3, 1 };
+        ret = sol->containsDuplicate(nums);
+        cout << ret << endl;
+
+        nums = { 1, 2, 3, 4 };
+        ret = sol->containsDuplicate(nums);
+        cout << ret << endl;
+
+        nums = { 1, 1, 1, 3, 3, 4, 3, 2, 4, 2 };
+        ret = sol->containsDuplicate(nums);
+        cout << ret << endl;
     }
 };

@@ -49,12 +49,14 @@ public:
 
 	void do_test(_0271_encode_and_decode_strings* sol)
 	{
-        /*
-        vector<string> dummy_input1 = { "Hello", "World" };
-        string encoded_msg = sol->encode(dummy_input1);
-        vector<string> decoded_msg = sol->decode(encoded_msg);
-        print_result(decoded_msg);
-        */
+        vector<string> dummy_input;
+        string encoded_msg;
+        vector<string> decoded_msg;
+        
+        dummy_input = { "Hello", "World" };
+        encoded_msg = sol->encode(dummy_input);
+        decoded_msg = sol->decode(encoded_msg);
+        print_vector(decoded_msg);
         /*
         Explanation :
         Machine 1 :
@@ -65,15 +67,15 @@ public:
         Codec decoder = new Codec();
         String[] strs = decoder.decode(msg);
         */
-        /*
-        vector<string> dummy_input2 = { "", ""};
-        string encoded_msg2 = sol->encode(dummy_input2);
-        vector<string> decoded_msg2 = sol->decode(encoded_msg2);
-        print_result(decoded_msg2);
-        */
-        vector<string> dummy_input3 = { "*tg,,~{A^", "qP_T,xL_", "C2-1#67%=" };
-        string encoded_msg3 = sol->encode(dummy_input3);
-        vector<string> decoded_msg3 = sol->decode(encoded_msg3);
-        print_vector(decoded_msg3);
+        
+        dummy_input = { "", "" };
+        encoded_msg = sol->encode(dummy_input);
+        decoded_msg = sol->decode(encoded_msg);
+        print_vector(decoded_msg);
+        
+        dummy_input = { "*tg,,~{A^", "qP_T,xL_", "C2-1#67%=" };
+        encoded_msg = sol->encode(dummy_input);
+        decoded_msg = sol->decode(encoded_msg);
+        print_vector(decoded_msg);
 	}
 };
