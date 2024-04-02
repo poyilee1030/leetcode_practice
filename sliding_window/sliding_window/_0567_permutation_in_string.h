@@ -10,12 +10,12 @@ using namespace std;
 class _0567_permutation_in_string
 {
 public:
+	// better solution
 	bool checkInclusion(string s1, string s2) {
 		int m = s1.size();
 		int n = s2.size();
-		if (m > n) {
+		if (m > n)
 			return false;
-		}
 
 		vector<int> count(26);
 		for (int i = 0; i < m; i++) {
@@ -36,7 +36,7 @@ public:
 
 		return false;
 	}
-
+	
 	bool isPermutation(vector<int>& count) {
 		for (int i = 0; i < 26; i++) {
 			if (count[i] != 0) {
@@ -45,7 +45,7 @@ public:
 		}
 		return true;
 	}
-	/*
+	/* 用了兩個 vector 來統計比較，其實可以優化成同一個 vector
 	bool checkInclusion(string s1, string s2) {
 		if (s1.size() > s2.size())
 			return false;
@@ -88,23 +88,19 @@ public:
 
 	void do_test(_0567_permutation_in_string* sol)
 	{
-		string c1s1 = "ab";
-		string c1s2 = "eidbaooo";
-		bool ret1 = sol->checkInclusion(c1s1, c1s2);
-		cout << ret1 << endl;
+		bool ret;
+
+		ret = sol->checkInclusion("ab", "eidbaooo");
+		cout << ret << endl;
 		//Output : true
 		//Explanation : s2 contains one permutation of s1("ba").
 		
-		string c2s1 = "ab";
-		string c2s2 = "eidboaoo";
-		bool ret2 = sol->checkInclusion(c2s1, c2s2);
-		cout << ret2 << endl;
+		ret = sol->checkInclusion("ab", "eidboaoo");
+		cout << ret << endl;
 		//Output : false
 
-		string c3s1 = "adc";
-		string c3s2 = "dcda";
-		bool ret3 = sol->checkInclusion(c3s1, c3s2);
-		cout << ret3 << endl;
+		ret = sol->checkInclusion("adc", "dcda");
+		cout << ret << endl;
 		//Output : true
 	}
 };

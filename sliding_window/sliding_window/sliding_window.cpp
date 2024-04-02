@@ -13,11 +13,11 @@
 int main()
 {
     //_0003_longest_substring_without_repeating_characters sol;
-    _0076_minimum_window_substring sol;
+    //_0076_minimum_window_substring sol;
     //_0121_best_time_to_buy_and_sell_stock sol;
     //_0239_sliding_window_maximum sol;
     //_0424_longest_repeating_character_replacement sol;
-    //_0567_permutation_in_string sol;
+    _0567_permutation_in_string sol;
     //_1838_frequency_of_the_most_frequent_element sol;
 
     sol.do_test(&sol);
