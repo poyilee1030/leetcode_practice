@@ -34,16 +34,17 @@ public:
     }
 
     void do_test(_0347_top_k_frequent_elements *sol) {
-        vector<int> nums1 = {1, 1, 1, 2, 2, 3};
-        int k1 = 2;
-        vector<int> ret1 = sol->topKFrequent(nums1, k1);
-        //Output: [0, 1]
-        print_vector(ret1);
+        vector<int> nums;
+        vector<int> ret;
 
-        vector<int> nums2 = {1};
-        int k2 = 1;
-        vector<int> ret2 = sol->topKFrequent(nums2, k2);
+        nums = { 1, 1, 1, 2, 2, 3 };
+        ret = sol->topKFrequent(nums, 2);
+        //Output: [0, 1]
+        print_vector(ret);
+
+        nums = { 1 };
+        ret = sol->topKFrequent(nums, 1);
         //Output: [1, 2]
-        print_vector(ret2);
+        print_vector(ret);
     }
 };

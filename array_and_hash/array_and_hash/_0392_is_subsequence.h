@@ -24,22 +24,18 @@ public:
 	}
 
 	void do_test(_0392_is_subsequence* sol) {
-		string s0 = "aaaaaa";
-		string t0 = "bbaaaa";
-		bool ret0 = sol->isSubsequence(s0, t0);
-		cout << ret0 << endl;
+		bool ret;
+		
+		ret = sol->isSubsequence("aaaaaa", "bbaaaa");
+		cout << ret << endl;
 		// Output : false
 
-		string s1 = "abc";
-		string t1 = "ahbgdc";
-		bool ret1 = sol->isSubsequence(s1, t1);
-		cout << ret1 << endl;
+		ret = sol->isSubsequence("abc", "ahbgdc");
+		cout << ret << endl;
 		// Output : true
 		
-		string s2 = "axc";
-		string t2 = "ahbgdc";
-		bool ret2 = sol->isSubsequence(s2, t2);
-		cout << ret2 << endl;
+		ret = sol->isSubsequence("axc", "ahbgdc");
+		cout << ret << endl;
 		// Output : false
 	}
 };

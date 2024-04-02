@@ -29,14 +29,17 @@ public:
     }
 
     void do_test(_0238_product_of_array_except_self *sol) {
-        vector<int> nums1 = { 1, 2, 3, 4 };
-        vector<int> ret1 = sol->productExceptSelf(nums1);
-        //Output: [24, 12, 8, 6]
-        print_vector(ret1);
+        vector<int> nums;
+        vector<int> ret;
 
-        vector<int> nums2 = { -1, 1, 0, -3, 3 };
-        vector<int> ret2 = sol->productExceptSelf(nums2);
+        nums = { 1, 2, 3, 4 };
+        ret = sol->productExceptSelf(nums);
+        print_vector(ret);
+        //Output: [24, 12, 8, 6]
+
+        nums = { -1, 1, 0, -3, 3 };
+        ret = sol->productExceptSelf(nums);
+        print_vector(ret);
         //Output: [0, 0, 9, 0, 0]
-        print_vector(ret2);
     }
 };

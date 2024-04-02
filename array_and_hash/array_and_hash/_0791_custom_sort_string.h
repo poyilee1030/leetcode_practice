@@ -52,8 +52,10 @@ public:
     */
 
 	void do_test(_0791_custom_sort_string* sol) {
-        string ret1 = sol->customSortString("cba", "abcd");
-        cout << ret1 << endl;
+        string ret;
+        
+        ret = sol->customSortString("cba", "abcd");
+        cout << ret << endl;
         /*
         Output : "cbad"
         Explanation :
@@ -62,8 +64,8 @@ public:
             "dcba", "cdba", "cbda" are also valid outputs.
         */
 
-        string ret2 = sol->customSortString("bcafg", "abcd");
-        cout << ret2 << endl;
+        ret = sol->customSortString("bcafg", "abcd");
+        cout << ret << endl;
         // Output : "bcad"
 	}
 };

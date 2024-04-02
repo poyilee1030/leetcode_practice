@@ -18,7 +18,9 @@
 #include "_0392_is_subsequence.h"
 #include "_0442_find_all_duplicates_in_an_array.h"
 #include "_0791_custom_sort_string.h"
-#include "_0912_sort_an_array.h"
+#include "_0912_sort_an_array_insertion_sort.h"
+#include "_0912_sort_an_array_merge_sort.h"
+#include "_0912_sort_an_array_quick_sort.h"
 #include "_0929_unique_email_addresses.h"
 #include "_1074_number_of_submatrices_that_sum_to_targe.h"
 #include "_1160_find_words_that_can_be_formed_by_characters.h"
@@ -58,7 +60,9 @@ int main()
     //_0392_is_subsequence sol;
     //_0442_find_all_duplicates_in_an_array sol;
     //_0791_custom_sort_string sol;
-    _0912_sort_an_array sol;
+    //_0912_sort_an_array_insertion_sort sol;
+    //_0912_sort_an_array_merge_sort sol;
+    _0912_sort_an_array_quick_sort sol;
     //_0929_unique_email_addresses sol;
     //_1074_number_of_submatrices_that_sum_to_targe sol;
     //_1160_find_words_that_can_be_formed_by_characters sol;

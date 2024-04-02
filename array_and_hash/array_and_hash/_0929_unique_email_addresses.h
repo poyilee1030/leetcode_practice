@@ -35,15 +35,18 @@ public:
 	}
 
 	void do_test(_0929_unique_email_addresses* sol) {
-		vector<string> emails1 = { "test.email+alex@leetcode.com", "test.e.mail+bob.cathy@leetcode.com", "testemail+david@lee.tcode.com" };
-		int ret1 = sol->numUniqueEmails(emails1);
-		cout << ret1 << endl;
+		vector<string> emails;
+		int ret;
+		
+		emails = { "test.email+alex@leetcode.com", "test.e.mail+bob.cathy@leetcode.com", "testemail+david@lee.tcode.com" };
+		ret = sol->numUniqueEmails(emails);
+		cout << ret << endl;
 		// Output : 2
 		// Explanation : "testemail@leetcode.com" and "testemail@lee.tcode.com" actually receive mails.
 
-		vector<string> emails2 = { "a@leetcode.com", "b@leetcode.com", "c@leetcode.com" };
-		int ret2 = sol->numUniqueEmails(emails2);
-		cout << ret2 << endl;
+		emails = { "a@leetcode.com", "b@leetcode.com", "c@leetcode.com" };
+		ret = sol->numUniqueEmails(emails);
+		cout << ret << endl;
 		// Output : 3
 	}
 };

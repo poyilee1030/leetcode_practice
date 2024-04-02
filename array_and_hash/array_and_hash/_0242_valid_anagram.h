@@ -34,14 +34,12 @@ public:
     }
 
     void do_test(_0242_valid_anagram *sol) {
-        string s1 = "anagram";
-        string t1 = "nagaram";
-        bool ret1 = sol->isAnagram(s1, t1);
-        cout << ret1 << endl;
+        bool ret;
 
-        string s2 = "rat";
-        string t2 = "car";
-        bool ret2 = sol->isAnagram(s2, t2);
-        cout << ret2 << endl;
+        ret = sol->isAnagram("anagram", "nagaram");
+        cout << ret << endl;
+
+        ret = sol->isAnagram("rat", "car");
+        cout << ret << endl;
     }
 };

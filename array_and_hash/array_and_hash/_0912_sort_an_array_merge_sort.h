@@ -6,7 +6,7 @@
 using namespace std;
 
 
-class _0912_sort_an_array {
+class _0912_sort_an_array_merge_sort {
 public:
     /* 自己憑直覺想的，效率較差，也能過 leetcode (610ms)
     vector<int> merge(vector<int>& pa, vector<int>& pb) {
@@ -88,15 +88,18 @@ public:
         return nums;
     }
 
-	void do_test(_0912_sort_an_array* sol) {
-        vector<int> nums1 = { 5, 2, 3, 1 };
-        vector<int> ret1 = sol->sortArray(nums1);
-        print_vector(ret1);
+	void do_test(_0912_sort_an_array_merge_sort* sol) {
+        vector<int> nums = { 5, 2, 3, 1 };
+        vector<int> ret;
+
+        nums = { 5, 2, 3, 1 };
+        ret = sol->sortArray(nums);
+        print_vector(ret);
         // Output : [1, 2, 3, 5]
-        
-        vector<int> nums2 = { 5, 1, 1, 2, 0, 0 };
-        vector<int> ret2 = sol->sortArray(nums2);
-        print_vector(ret2);
+
+        nums = { 5, 1, 1, 2, 0, 0 };
+        ret = sol->sortArray(nums);
+        print_vector(ret);
         // Output : [0, 0, 1, 1, 2, 5]
 	}
 };
