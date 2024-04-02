@@ -61,8 +61,8 @@ int main()
     //_0442_find_all_duplicates_in_an_array sol;
     //_0791_custom_sort_string sol;
     //_0912_sort_an_array_insertion_sort sol;
-    _0912_sort_an_array_merge_sort sol;
-    //_0912_sort_an_array_quick_sort sol;
+    //_0912_sort_an_array_merge_sort sol;
+    _0912_sort_an_array_quick_sort sol;
     //_0929_unique_email_addresses sol;
     //_1074_number_of_submatrices_that_sum_to_targe sol;
     //_1160_find_words_that_can_be_formed_by_characters sol;
