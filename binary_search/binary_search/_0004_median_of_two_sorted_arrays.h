@@ -46,7 +46,7 @@ public:
             }
             else {
                 // odd -> even
-                mid_idx--;
+                mid_idx++;
             }
         }
         else if (nums1.back() < target) {
@@ -56,7 +56,7 @@ public:
             }
             else {
                 // odd -> even
-                mid_idx++;
+                mid_idx--;
             }
         }
         else {
