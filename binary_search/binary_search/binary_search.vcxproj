@@ -130,6 +130,7 @@
     <ClCompile Include="binary_search.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="_0004_median_of_two_sorted_arrays.h" />
     <ClInclude Include="_0033_search_in_rotated_sorted_array.h" />
     <ClInclude Include="_0074_search_a_2d_matrix.h" />
     <ClInclude Include="_0153_find_minimum_in_rotated_sorted_array.h" />
