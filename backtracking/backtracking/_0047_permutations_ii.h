@@ -25,7 +25,7 @@ public:
         return ans;
     }
 
-    void dfs(unordered_map<int, int>& freq, vector<int> curr, int n, vector<vector<int>>& ans) {
+    void dfs(unordered_map<int, int>& freq, vector<int>& curr, int n, vector<vector<int>>& ans) {
         if (curr.size() == n) {
             ans.push_back(curr);
             return;

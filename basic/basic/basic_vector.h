@@ -40,11 +40,16 @@ void print_vector_of_vector(vector<vector<T>> v) {
 
 
 void basic_vector() {
-    // --------- 1d vector 初始化 ---------
     
-    vector<int> a;
+    // --------- 1d vector 初始化 ---------
     vector<int> b = { 1, 2, 3, 4, 5, 19, 11, 7};
     print_vector(b);
+
+    // assign 時，實際上是複製了一份，之後對 a 更改，b 也不受影響
+    vector<int> a = b;
+    a[5] = 18;
+    print_vector(a);
+
 
     vector<int> c(5, 1); //(size, value)
     print_vector(c);
@@ -83,4 +88,16 @@ void basic_vector() {
 
     // value default is 4
     vector<vector<int>> fog2(row_count, vector<int>(col_count, 4));
+
+
+    vector<vector<int>> ans;
+    vector<int> curr = { 3, 5, 7 };
+    // push_back 時，實際上是複製了一份，之後對 curr 更改，ans 也不受影響
+    cout << "##############" << endl;
+    ans.push_back(curr);
+    print_vector_of_vector(ans);
+    curr[1] = 4;
+    cout << "after change some element in curr" << endl;
+    print_vector_of_vector(ans);
+    
 }
