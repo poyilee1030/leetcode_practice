@@ -3,6 +3,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include "utils.h"
 
 using namespace std;
 
@@ -10,6 +11,35 @@ using namespace std;
 class _0046_permutations
 {
 public:
+	vector<vector<int>> permute(vector<int>& nums) {
+		int n = nums.size();
+		vector<vector<int>> ans;
+		vector<bool> visit(n, false);
+		vector<int> curr;
+		dfs(nums, curr, visit, ans);
+		return ans;
+	}
+
+	void dfs(vector<int>& nums, vector<int>& curr, vector<bool>& visit, vector<vector<int>>& ans) {
+		if (curr.size() == nums.size()) {
+			ans.push_back(curr);
+			return;
+		}
+
+		for (int i = 0; i < nums.size(); i++) {
+			if (visit[i])
+				continue;
+			else {
+				visit[i] = true;
+				curr.push_back(nums[i]);
+				dfs(nums, curr, visit, ans);
+				visit[i] = false;
+				curr.pop_back();
+			}
+		}
+	}
+
+	/*
 	vector<vector<int>> permute(vector<int>& nums) {
 		vector<vector<int>> result;
 		vector<int> curr = {};
@@ -31,45 +61,26 @@ public:
 			}
 		}
 	}
+	*/
 
 	void do_test(_0046_permutations* sol)
 	{
-		vector<int> nums1 = { 1, 2, 3 };
-		vector<vector<int>> res1 = sol->permute(nums1);
-		print_res(res1);
+		vector<int> nums;
+		vector<vector<int>> ret;
+
+		nums = { 1, 2, 3 };
+		ret = sol->permute(nums);
+		print_vector_of_vector(ret);
 		//Output : [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]
 		
-		vector<int> nums2 = { 0, 1 };
-		vector<vector<int>> res2 = sol->permute(nums2);
-		print_res(res2);
+		nums = { 0, 1 };
+		ret = sol->permute(nums);
+		print_vector_of_vector(ret);
 		//Output : [[0, 1], [1, 0]]
 		
-		vector<int> nums3 = { 1 };
-		vector<vector<int>> res3 = sol->permute(nums3);
-		print_res(res3);
+		nums = { 1 };
+		ret = sol->permute(nums);
+		print_vector_of_vector(ret);
 		//Output : [[1]]
 	}
-
-	void print_res(vector<vector<int>> res)
-	{
-		cout << "[";
-		for (int i = 0; i < res.size(); ++i)
-		{
-			cout << "[";
-			vector<int> oo = res[i];
-			for (int j = 0; j < oo.size(); ++j)
-			{
-				cout << oo[j];
-				if (j != oo.size() - 1)
-					cout << ",";
-			}
-			cout << "]";
-			if (i != res.size() - 1)
-				cout << ",";
-		}
-		cout << "]" << endl;
-	}
 };
-
-
-

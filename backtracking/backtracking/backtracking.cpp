@@ -5,6 +5,7 @@
 #include "_0039_combination_sum.h"
 #include "_0040_combination_sum_ii.h"
 #include "_0046_permutations.h"
+#include "_0047_permutations_ii.h"
 #include "_0051_n_queens.h"
 #include "_0078_subsets.h"
 #include "_0079_word_search.h"
@@ -19,12 +20,13 @@ int main()
     //_0039_combination_sum sol;
     //_0040_combination_sum_ii sol;
     //_0046_permutations sol;
+    _0047_permutations_ii sol;
     //_0051_n_queens sol;
     //_0078_subsets sol;
     //_0079_word_search sol;
     //_0090_subsets_ii sol;
     //_0131_palindrome_partitioning sol;
-    _1239_maximum_length_of_concatenated_string_with_unique_characters sol;
+    //_1239_maximum_length_of_concatenated_string_with_unique_characters sol;
 
     sol.do_test(&sol);
 }
