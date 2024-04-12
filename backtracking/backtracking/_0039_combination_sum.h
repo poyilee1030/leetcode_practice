@@ -3,6 +3,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include "utils.h"
 
 using namespace std;
 
@@ -14,15 +15,16 @@ public:
 		sort(candidates.begin(), candidates.end());
 
 		vector<int> curr;
-		vector<vector<int>> result;
+		vector<vector<int>> ans;
 
-		dfs(candidates, target, 0, 0, curr, result);
-		return result;
+		dfs_style2(candidates, target, 0, 0, curr, ans);
+		return ans;
 	}
 
-	void dfs(vector<int>& candidates, int target, int total, int i, vector<int>& curr, vector<vector<int>>& result) {
+	// style 1
+	void dfs_style1(vector<int>& candidates, int target, int i, int total, vector<int>& curr, vector<vector<int>>& ans) {
 		if (total == target) {
-			result.push_back(curr);
+			ans.push_back(curr);
 			return;
 		}
 		if (i >= candidates.size() || total > target) {
@@ -30,55 +32,50 @@ public:
 		}
 
 		curr.push_back(candidates[i]);
-		dfs(candidates, target, total + candidates[i], i, curr, result);
+		dfs_style1(candidates, target, i, total + candidates[i], curr, ans);
 		curr.pop_back();
-		dfs(candidates, target, total, i + 1, curr, result);
+		dfs_style1(candidates, target, i + 1, total, curr, ans);
+	}
+
+	// style 2
+	void dfs_style2(vector<int>& candidates, int target, int i, int total, vector<int>& curr, vector<vector<int>>& ans) {
+		if (total == target) {
+			ans.push_back(curr);
+			return;
+		}
+		if (total > target) {
+			return;
+		}
+
+		for (int j = i; j < candidates.size(); j++) {
+			curr.push_back(candidates[j]);
+			dfs_style2(candidates, target, j, total + candidates[j], curr, ans);
+			curr.pop_back();
+		}
 	}
 
 	void do_test(_0039_combination_sum* sol)
 	{
-		vector<int> candidates1 = { 2, 3, 6, 7 }; 
-		int target1 = 7;
-		vector<vector<int>> ret1 = combinationSum(candidates1, target1);
-		print_res(ret1);
-		//Output : [[2, 2, 3], [7]]
-		//Explanation :
-		//2 and 3 are candidates, and 2 + 2 + 3 = 7. Note that 2 can be used multiple times.
-		//7 is a candidate, and 7 = 7.
-		//These are the only two combinations.
+		vector<int> candidates;
+		vector<vector<int>> ret;
 
-		vector<int> candidates2 = {2, 3, 5};
-		int target2 = 8;
-		vector<vector<int>> ret2 = combinationSum(candidates2, target2);
-		print_res(ret2);
-		//Output : [[2, 2, 2, 2], [2, 3, 3], [3, 5]]
+		candidates = { 2, 3, 6, 7 }; 
+		ret = combinationSum(candidates, 7);
+		print_vector_of_vector(ret);
+		// Output : [[2, 2, 3], [7]]
+		// Explanation :
+		// 2 and 3 are candidates, and 2 + 2 + 3 = 7. Note that 2 can be used multiple times.
+		// 7 is a candidate, and 7 = 7.
+		// These are the only two combinations.
 
-		vector<int> candidates3 = { 2 }; 
-		int target3 = 1;
-		vector<vector<int>> ret3 = combinationSum(candidates3, target3);
-		print_res(ret3);
-		//Output : []
-	}
+		candidates = { 2, 3, 5 };
+		ret = combinationSum(candidates, 8);
+		print_vector_of_vector(ret);
+		// Output : [[2, 2, 2, 2], [2, 3, 3], [3, 5]]
 
-	void print_res(vector<vector<int>> res)
-	{
-		cout << "[";
-		for (int i = 0; i < res.size(); ++i)
-		{
-			cout << "[";
-			vector<int> oo = res[i];
-			for (int j = 0; j < oo.size(); ++j)
-			{
-				cout << oo[j];
-				if (j != oo.size() - 1)
-					cout << ",";
-			}
-			cout << "]";
-			if (i != res.size() - 1)
-				cout << ",";
-		}
-		cout << "]" << endl;
+		candidates = { 2 }; 
+		ret = combinationSum(candidates, 1);
+		print_vector_of_vector(ret);
+		// Output : []
 	}
 };
-
-
