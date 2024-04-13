@@ -6,6 +6,7 @@
 #include "_0084_largest_rectangle_in_histogram.h"
 #include "_0150_evaluate_reverse_polish_notation.h"
 #include "_0155_min_stack.h"
+#include "_0402_remove_k_digits.h"
 #include "_0739_daily_temperatures.h"
 #include "_0853_car_fleet.h"
 #include "_0907_sum_of_subarray_minimums.h"
@@ -18,9 +19,10 @@ int main()
     //_0084_largest_rectangle_in_histogram sol;
     //_0150_evaluate_reverse_polish_notation sol;
     //_0155_min_stack sol;
+    _0402_remove_k_digits sol;
     //_0739_daily_temperatures sol;
     //_0853_car_fleet sol;
-    _0907_sum_of_subarray_minimums sol;
+    //_0907_sum_of_subarray_minimums sol;
     //_1441_build_an_array_with_stack_operations sol;
 
     sol.do_test(&sol);
