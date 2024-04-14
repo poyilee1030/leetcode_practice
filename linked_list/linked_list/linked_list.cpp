@@ -17,7 +17,7 @@
 int main()
 {
     //_0002_add_two_numbers sol;
-    //_0019_remove_nth_node_from_end_of_list sol;
+    _0019_remove_nth_node_from_end_of_list sol;
     //_0021_merge_two_sorted_lists sol;
     //_0023_merge_k_sorted_lists sol;
     //_0025_reverse_nodes_in_k_group sol;
@@ -26,7 +26,7 @@ int main()
     //_0143_reorder_list sol;
     //_0146_lru_cache sol(2);
     //_0206_reverse_linked_list sol;
-    _0287_find_the_duplicate_number sol;
+    //_0287_find_the_duplicate_number sol;
 
     sol.do_test(&sol);
 }
