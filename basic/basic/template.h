@@ -6,24 +6,39 @@
 using namespace std;
 
 
-// Find all primes <= n.
-vector<int>Eratosthenes(int n)
+// check int is prime or not
+bool prime(int x)
 {
-    vector<int>q(n + 1, 0);
-    vector<int>primes;
-    for (int i = 2; i <= sqrt(n); i++)
-    {
+    if (x == 1) {
+        return false;
+    }
+
+    for (int i = 2; i * i <= x; i++) {
+        if (x % i == 0) 
+            return false;
+    }
+
+    return true;
+}
+
+
+// find all primes <= n.
+vector<int> eratosthenes(int n)
+{
+    vector<int> q(n + 1, 0);
+    vector<int> primes;
+    for (int i = 2; i <= sqrt(n); i++) {
         if (q[i] == 1)
             continue;
+
         int j = i * 2;
-        while (j <= n)
-        {
+        while (j <= n) {
             q[j] = 1;
             j += i;
         }
     }
-    for (int i = 2; i <= n; i++)
-    {
+
+    for (int i = 2; i <= n; i++) {
         if (q[i] == 0)
             primes.push_back(i);
     }
