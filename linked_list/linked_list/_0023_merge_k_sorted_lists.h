@@ -10,7 +10,53 @@ using namespace std;
 class _0023_merge_k_sorted_lists
 {
 public:
-    // 用 min_idx, min_val 取代上一版的 next_node, leetcode 214ms
+    ListNode* merge(ListNode* list1, ListNode* list2) {
+        ListNode* merged = new ListNode(-1);
+        ListNode* mptr = merged;
+        ListNode* left = list1;
+        ListNode* right = list2;
+
+        while (left != NULL && right != NULL) {
+            if (left->val <= right->val) {
+                mptr->next = left;
+                mptr = mptr->next;
+                left = left->next;
+            }
+            else {
+                mptr->next = right;
+                mptr = mptr->next;
+                right = right->next;
+            }
+        }
+        if (left != NULL) {
+            mptr->next = left;
+        }
+        if (right != NULL) {
+            mptr->next = right;
+        }
+
+        return merged->next;
+    }
+
+    // leetcode 122ms
+    ListNode* mergeKLists(vector<ListNode*>& lists) {
+        if (lists.size() == 0) {
+            return NULL;
+        }
+
+        if (lists.size() == 1) {
+            return lists[0];
+        }
+
+        ListNode* head = lists[0];
+        for (int i = 1; i < lists.size(); ++i) {
+            head = merge(head, lists[i]);
+        }
+
+        return head;
+    }
+
+    /* 用 min_idx, min_val 取代上一版的 next_node, leetcode 214ms
     ListNode* mergeKLists(vector<ListNode*>& lists) {
         ListNode* dummy = new ListNode(0);
         ListNode* curr = dummy;
@@ -40,6 +86,7 @@ public:
         }
         return dummy->next;
     }
+    */
 
     /* 自己想的, leetcode 489ms
     ListNode* mergeKLists(vector<ListNode*>& lists) {
