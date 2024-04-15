@@ -17,9 +17,9 @@
 int main()
 {
     //_0002_add_two_numbers sol;
-    _0019_remove_nth_node_from_end_of_list sol;
+    //_0019_remove_nth_node_from_end_of_list sol;
     //_0021_merge_two_sorted_lists sol;
-    //_0023_merge_k_sorted_lists sol;
+    _0023_merge_k_sorted_lists sol;
     //_0025_reverse_nodes_in_k_group sol;
     //_0138_copy_list_with_random_pointer sol;
     //_0141_linked_list_cycle sol;
