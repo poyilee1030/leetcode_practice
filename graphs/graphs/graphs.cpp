@@ -28,8 +28,8 @@ int main()
     //_0207_course_schedule sol;
     //_0210_course_schedule_ii sol;
     //_0261_graph_valid_tree sol;
-    //_0286_walls_and_gates sol;
-    _0323_number_of_connected_components_in_an_undirected_graph sol;
+    _0286_walls_and_gates sol;
+    //_0323_number_of_connected_components_in_an_undirected_graph sol;
     //_0417_pacific_atlantic_water_flow_bfs sol;
     //_0417_pacific_atlantic_water_flow_dfs sol;
     //_0684_redundant_connection sol;

@@ -5,6 +5,7 @@
 #include <queue>
 #include <unordered_set>
 #include <string>
+#include "utils.h"
 
 using namespace std;
 
@@ -23,12 +24,12 @@ class _0286_walls_and_gates
     vector<vector<int>> dirs = { {-1, 0}, {1, 0}, {0, -1}, {0, 1} };
 public:
     void wallsAndGates(vector<vector<int>>& rooms) {
-        int m = rooms.size();
-        int n = rooms[0].size();
+        int rows = rooms.size();
+        int cols = rooms[0].size();
 
         queue<pair<int, int>> q;
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
                 if (rooms[i][j] == 0) {
                     q.push({ i, j });
                 }
@@ -36,19 +37,18 @@ public:
         }
 
         while (!q.empty()) {
-            int row = q.front().first;
-            int col = q.front().second;
+            int m = q.front().first;
+            int n = q.front().second;
             q.pop();
 
             for (int i = 0; i < 4; i++) {
-                int x = row + dirs[i][0];
-                int y = col + dirs[i][1];
-
-                if (x < 0 || x >= m || y < 0 || y >= n || rooms[x][y] != INT_MAX) {
+                int x = m + dirs[i][0];
+                int y = n + dirs[i][1];
+                if (x < 0 || x >= rows || y < 0 || y >= cols || rooms[x][y] != INT_MAX) {
                     continue;
                 }
 
-                rooms[x][y] = rooms[row][col] + 1;
+                rooms[x][y] = rooms[m][n] + 1;
                 q.push({ x, y });
             }
         }
@@ -106,40 +106,19 @@ public:
 
 	void do_test(_0286_walls_and_gates* sol)
 	{
-		vector<vector<int>> rooms1 = { {2147483647, -1, 0, 2147483647},
-									   {2147483647, 2147483647, 2147483647, -1},
-									   {2147483647, -1, 2147483647, -1},
-									   {0, -1, 2147483647, 2147483647} };
-		sol->wallsAndGates(rooms1);
-        print_res(rooms1);
+        vector<vector<int>> rooms;
+		rooms = { {INT_MAX, -1, 0, INT_MAX},
+		    	  {INT_MAX, INT_MAX, INT_MAX, -1},
+				  {INT_MAX, -1, INT_MAX, -1},
+				  {0, -1, INT_MAX, INT_MAX} };
+		sol->wallsAndGates(rooms);
+        print_vector_of_vector(rooms);
 		// Output : {{3, -1, 0, 1}, {2, 2, 1, -1}, {1, -1, 2, -1}, {0, -1, 3, 4}}
 		
 
-		vector<vector<int>> rooms2 = { {-1} };
-		sol->wallsAndGates(rooms2);
-        print_res(rooms2);
+		rooms = { {-1} };
+		sol->wallsAndGates(rooms);
+        print_vector_of_vector(rooms);
 		// Output : {{-1}}
 	}
-
-    void print_res(vector<vector<int>>& res)
-    {
-        cout << "[";
-        for (int i = 0; i < res.size(); i++)
-        {
-            cout << "[";
-            vector<int> oo = res[i];
-            for (int j = 0; j < oo.size(); j++)
-            {
-                cout << oo[j];
-                if (j < oo.size() - 1)
-                    cout << ",";
-            }
-            cout << "]";
-
-            if (i < res.size() - 1)
-                cout << ",";
-        }
-        cout << "]" << endl;
-    }
 };
-

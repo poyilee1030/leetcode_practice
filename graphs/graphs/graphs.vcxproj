@@ -131,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="define.h" />
+    <ClInclude Include="utils.h" />
     <ClInclude Include="_0127_word_ladder.h" />
     <ClInclude Include="_0130_surrounded_regions_dfs.h" />
     <ClInclude Include="_0133_clone_graph.h" />
