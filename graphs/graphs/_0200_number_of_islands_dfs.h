@@ -9,53 +9,58 @@ using namespace std;
 class _0200_number_of_islands_dfs
 {
 public:
+    int rows, cols;
     int numIslands(vector<vector<char>>& grid) {
-        int m = grid.size();
-        int n = grid[0].size();
+        rows = grid.size();
+        cols = grid[0].size();
 
-        int result = 0;
-
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                if (grid[i][j] == '1') {
-                    dfs(grid, i, j, m, n);
-                    result++;
+        int ans = 0;
+        for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++) {
+                if (grid[r][c] == '1') {
+                    dfs(grid, r, c);
+                    ans += 1;
                 }
             }
         }
-
-        return result;
+        return ans;
     }
 
-    void dfs(vector<vector<char>>& grid, int i, int j, int m, int n) {
-        if (i < 0 || i >= m || j < 0 || j >= n || grid[i][j] == '0') {
+    // 一般來說可以另外開個 visit 來記錄走過的位置
+    // 這裡直接把 '1' 改成 '#' 效率更好
+    void dfs(vector<vector<char>>& grid, int r, int c) {
+        if (r < 0 || r >= rows || c < 0 || c >= cols) {
             return;
         }
-        grid[i][j] = '0';
 
-        dfs(grid, i - 1, j, m, n);
-        dfs(grid, i + 1, j, m, n);
-        dfs(grid, i, j - 1, m, n);
-        dfs(grid, i, j + 1, m, n);
+        if (grid[r][c] == '1') {
+            grid[r][c] = '#';
+            dfs(grid, r + 1, c);
+            dfs(grid, r - 1, c);
+            dfs(grid, r, c + 1);
+            dfs(grid, r, c - 1);
+        }
     }
 
-	void do_test(_0200_number_of_islands_dfs* sol)
-	{
-		vector<vector<char>> grid1 = { {'1', '1', '1', '1', '0'},
-									   {'1', '1', '0', '1', '0'},
-									   {'1', '1', '0', '0', '0'},
-									   {'0', '0', '0', '0', '0'}};
-		int ret1 = sol->numIslands(grid1);
-		cout << ret1 << endl;
+	void do_test(_0200_number_of_islands_dfs* sol) {
+        vector<vector<char>> grid;
+        int ret;
+
+		grid = { {'1', '1', '1', '1', '0'},
+ 			     {'1', '1', '0', '1', '0'},
+				 {'1', '1', '0', '0', '0'},
+				 {'0', '0', '0', '0', '0'}};
+		ret = sol->numIslands(grid);
+		cout << ret << endl;
 		//Output : 1
 		
 
-		vector<vector<char>> grid2 = { {'1', '1', '0', '0', '0'},
-									   {'1', '1', '0', '0', '0'},
-									   {'0', '0', '1', '0', '0'},
-									   {'0', '0', '0', '1', '1'} };
-		int ret2 = sol->numIslands(grid2);
-		cout << ret2 << endl;
+		grid = { {'1', '1', '0', '0', '0'},
+			     {'1', '1', '0', '0', '0'},
+				 {'0', '0', '1', '0', '0'},
+				 {'0', '0', '0', '1', '1'} };
+		ret = sol->numIslands(grid);
+		cout << ret << endl;
 		//Output : 3
 	}
 };
