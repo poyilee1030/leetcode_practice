@@ -1,5 +1,5 @@
 #pragma once
-
+#include <algorithm>
 #include <iostream>
 #include <vector>
 #include <string>
@@ -10,6 +10,27 @@ using namespace std;
 
 
 void basic_string_operate() {
+    cout << "-------- string test part 1 ---------" << endl;
+
+    string word = "aAbBcCEFGefg";
+    int ans = 0;
+    int ret1 = word.find('d');
+    int ret2 = word.find('B');
+    cout << ret1 << ", " << ret2 << endl;
+    cout << word.find('d') << ", " << word.find('B') << endl;
+    size_t ret3 = word.find('d');
+    cout << ret3 << endl;
+    cout << string::npos << endl;
+    if (word.find('d') == -1)
+        cout << "not found d" << endl;
+    
+    // 注意，string find 其實是返回一個 size_t (unsigned integer)
+    // 所以如果是跟 >= 0 比較的話是會成立的!
+    if (word.find('d') >= 0)
+        cout << "found d" << endl;
+    
+
+    cout << "-------- string test part 2 ---------" << endl;
     // string
     // string to int
     string ss = "123";
@@ -23,7 +44,7 @@ void basic_string_operate() {
     cout << ssss.substr(2, 3) << endl;
     //                     ↑ length
     // output = 345
-    cout << "############################" << endl;
+    cout << "-------- string test part 3 ---------" << endl;
     int l = 0;
     int wsize = 3;
     while (l < ssss.size()-wsize+1) {

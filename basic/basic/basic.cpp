@@ -35,11 +35,11 @@ int main()
         }
     }
 
-    cout << endl << "-------------------------------------------------------" << endl;
+    cout << endl << "-------------- basic test end ----------------" << endl;
 
     //basic_queue();
 
-    //basic_string_operate();
+    basic_string_operate();
 
     //basic_unordered_map();
 
@@ -47,7 +47,7 @@ int main()
 
     //basic_stack();
 
-    basic_vector();
+    //basic_vector();
     
     //basic_check();
 
