@@ -130,6 +130,7 @@
     <ClCompile Include="advanced_graphs.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="utils.h" />
     <ClInclude Include="_0269_alien_dictionary.h" />
     <ClInclude Include="_0332_reconstruct_itinerary.h" />
     <ClInclude Include="_0778_swim_in_rising_water.h" />
