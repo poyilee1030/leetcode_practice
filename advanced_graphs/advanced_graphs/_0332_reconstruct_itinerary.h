@@ -14,8 +14,7 @@ class _0332_reconstruct_itinerary
 {
     unordered_map<string, queue<string>> route;
 public:
-    vector<string> findItinerary(vector<vector<string>> tickets)
-    {
+    vector<string> findItinerary(vector<vector<string>> tickets) {
         sort(tickets.begin(), tickets.end());
         for (auto ticket: tickets)
             route[ticket[0]].push(ticket[1]);
