@@ -6,9 +6,11 @@
 #include "_0743_network_delay_time.h"
 #include "_0778_swim_in_rising_water.h"
 #include "_0787_cheapest_flights_within_k_stops.h"
+#include "_0834_sum_of_distances_in_tree.h"
 #include "_1584_min_cost_to_connect_all_points_kruskal.h"
 #include "_1584_min_cost_to_connect_all_points_prim.h"
 #include "_2092_find_all_people_with_secret.h"
+
 
 int main()
 {
@@ -17,8 +19,9 @@ int main()
     //_0743_network_delay_time sol;
     //_0778_swim_in_rising_water sol;
     //_0787_cheapest_flights_within_k_stops sol;
+    _0834_sum_of_distances_in_tree sol;
     //_1584_min_cost_to_connect_all_points_kruskal sol;
-    _1584_min_cost_to_connect_all_points_prim sol;
+    //_1584_min_cost_to_connect_all_points_prim sol;
     //_2092_find_all_people_with_secret sol;
 
     sol.do_test(&sol);

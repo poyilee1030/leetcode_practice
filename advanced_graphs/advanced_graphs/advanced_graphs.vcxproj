@@ -139,6 +139,7 @@
     <ClInclude Include="_1584_min_cost_to_connect_all_points_kruskal.h" />
     <ClInclude Include="_1584_min_cost_to_connect_all_points_prim.h" />
     <ClInclude Include="_2092_find_all_people_with_secret.h" />
+    <ClInclude Include="_0834_sum_of_distances_in_tree.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
