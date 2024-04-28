@@ -45,6 +45,25 @@ void basic_vector() {
     vector<int> b = { 1, 2, 3, 4, 5, 19, 11, 7};
     print_vector(b);
 
+    // 在 vector 找某個元素
+    if (find(b.begin(), b.end(), 4) != b.end())
+        cout << "found!" << endl;
+
+    // 在 vector 找某個元素的 idx
+    auto itx = find(b.begin(), b.end(), 4);
+    if (itx == b.end()) {
+        // name not in vector
+    }
+    else {
+        // way1: c++11之後可以使用 distance
+        int index1 = distance(b.begin(), itx);
+        cout << "the index1 = " << index1 << endl;
+
+        // way2: c++11以前的寫法
+        int index2 = find(b.begin(), b.end(), 4) - b.begin();
+        cout << "the index2 = " << index2 << endl;
+    }
+
     // assign 時，實際上是複製了一份，之後對 a 更改，b 也不受影響
     vector<int> a = b;
     a[5] = 18;
