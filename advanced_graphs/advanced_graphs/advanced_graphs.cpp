@@ -16,10 +16,10 @@ int main()
 {
     //_0269_alien_dictionary sol;
     //_0332_reconstruct_itinerary sol;
-    //_0743_network_delay_time sol;
+    _0743_network_delay_time sol;
     //_0778_swim_in_rising_water sol;
     //_0787_cheapest_flights_within_k_stops sol;
-    _0834_sum_of_distances_in_tree sol;
+    //_0834_sum_of_distances_in_tree sol;
     //_1584_min_cost_to_connect_all_points_kruskal sol;
     //_1584_min_cost_to_connect_all_points_prim sol;
     //_2092_find_all_people_with_secret sol;
