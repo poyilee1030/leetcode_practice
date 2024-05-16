@@ -32,22 +32,17 @@ public:
 
 	void do_test(_0704_binary_search* sol)
 	{
-		vector<int> nums1 = { -1, 0, 3, 5, 9, 12 };
-		int target1 = 9;
-		int ret1 = sol->search(nums1, target1);
+		vector<int> nums;
+		int ret;
+		
+		nums = { -1, 0, 3, 5, 9, 12 };
+		ret = sol->search(nums, 9);
 		//Output : 4
-		cout << ret1 << endl;
+		cout << ret << endl;
 
-		vector<int> nums2 = { -1, 0, 3, 5, 9, 12 }; 
-		int target2 = 2;
-		int ret2 = sol->search(nums2, target2);
+		nums = { -1, 0, 3, 5, 9, 12 }; 
+		ret = sol->search(nums, 2);
 		//Output : -1
-		cout << ret2 << endl;
+		cout << ret << endl;
 	}
 };
-
-
-
-
-
-

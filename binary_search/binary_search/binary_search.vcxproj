@@ -135,6 +135,7 @@
     <ClInclude Include="_0074_search_a_2d_matrix.h" />
     <ClInclude Include="_0153_find_minimum_in_rotated_sorted_array.h" />
     <ClInclude Include="_0704_binary_search.h" />
+    <ClInclude Include="_0000_template_testing.h" />
     <ClInclude Include="_0875_koko_eating_bananas.h" />
     <ClInclude Include="_0981_time_based_key_value_store.h" />
   </ItemGroup>
