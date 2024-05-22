@@ -20,12 +20,12 @@ int main()
     //_0039_combination_sum sol;
     //_0040_combination_sum_ii sol;
     //_0046_permutations sol;
-    _0047_permutations_ii sol;
+    //_0047_permutations_ii sol;
     //_0051_n_queens sol;
     //_0078_subsets sol;
     //_0079_word_search sol;
     //_0090_subsets_ii sol;
-    //_0131_palindrome_partitioning sol;
+    _0131_palindrome_partitioning sol;
     //_1239_maximum_length_of_concatenated_string_with_unique_characters sol;
 
     sol.do_test(&sol);

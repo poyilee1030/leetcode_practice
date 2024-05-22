@@ -45,34 +45,14 @@ public:
 
 	void do_test(_0131_palindrome_partitioning* sol)
 	{
-		string s1 = "aab";
-		vector<vector<string>> res1 = sol->partition(s1);
-		print_res(res1);
+		vector<vector<string>> res;
+
+		res = sol->partition("aab");
+		print_vector_of_vector(res);
 		//Output : [["a", "a", "b"], ["aa", "b"]]
 		
-		string s2 = "a";
-		vector<vector<string>> res2 = sol->partition(s2);
-		print_res(res2);
+		res = sol->partition("a");
+		print_vector_of_vector(res);
 		//Output : [["a"]]
-	}
-
-	void print_res(vector<vector<string>> res)
-	{
-		cout << "[";
-		for (int i = 0; i < res.size(); ++i)
-		{
-			cout << "[";
-			vector<string> oo = res[i];
-			for (int j = 0; j < oo.size(); ++j)
-			{
-				cout << oo[j];
-				if (j != oo.size() - 1)
-					cout << ",";
-			}
-			cout << "]";
-			if (i != res.size() - 1)
-				cout << ",";
-		}
-		cout << "]" << endl;
 	}
 };

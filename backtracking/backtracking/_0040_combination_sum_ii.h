@@ -12,11 +12,9 @@ class _0040_combination_sum_ii
 {
 public:
 	vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
-		sort(candidates.begin(), candidates.end());
-
 		vector<int> curr;
 		vector<vector<int>> ans;
-		
+		sort(candidates.begin(), candidates.end());
 		dfs_style2(candidates, target, 0, 0, curr, ans);
 		return ans;
 	}
@@ -38,7 +36,6 @@ public:
 			i++;
 		dfs_style1(candidates, target, i + 1, total, curr, ans);
 	}
-	
 
 	// style 2
 	void dfs_style2(vector<int>& candidates, int target, int i, int total, vector<int>& curr, vector<vector<int>>& ans) {
@@ -46,9 +43,8 @@ public:
             ans.push_back(curr);
             return;
         }
-        if (total > target) {
+        if (total > target)
             return;
-        }
         
         for (int j = i; j < candidates.size(); j++) {
             if (j > i && candidates[j] == candidates[j-1])
