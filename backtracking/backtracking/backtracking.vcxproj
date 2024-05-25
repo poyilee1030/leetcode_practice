@@ -130,18 +130,18 @@
     <ClCompile Include="backtracking.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="0017\_0017_letter_combinations_of_a_phone_number.h" />
+    <ClInclude Include="0039\_0039_combination_sum.h" />
+    <ClInclude Include="0040\_0040_combination_sum_ii.h" />
+    <ClInclude Include="0046\_0046_permutations.h" />
+    <ClInclude Include="0047\_0047_permutations_ii.h" />
+    <ClInclude Include="0051\_0051_n_queens.h" />
+    <ClInclude Include="0078\_0078_subsets.h" />
+    <ClInclude Include="0079\_0079_word_search.h" />
+    <ClInclude Include="0090\_0090_subsets_ii.h" />
+    <ClInclude Include="0131\_0131_palindrome_partitioning.h" />
+    <ClInclude Include="1239\_1239_maximum_length_of_concatenated_string_with_unique_characters.h" />
     <ClInclude Include="utils.h" />
-    <ClInclude Include="_0017_letter_combinations_of_a_phone_number.h" />
-    <ClInclude Include="_0039_combination_sum.h" />
-    <ClInclude Include="_0040_combination_sum_ii.h" />
-    <ClInclude Include="_0046_permutations.h" />
-    <ClInclude Include="_0047_permutations_ii.h" />
-    <ClInclude Include="_0051_n_queens.h" />
-    <ClInclude Include="_0078_subsets.h" />
-    <ClInclude Include="_0079_word_search.h" />
-    <ClInclude Include="_0090_subsets_ii.h" />
-    <ClInclude Include="_0131_palindrome_partitioning.h" />
-    <ClInclude Include="_1239_maximum_length_of_concatenated_string_with_unique_characters.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
