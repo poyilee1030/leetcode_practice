@@ -11,6 +11,8 @@
 #include "0079/_0079_word_search.h"
 #include "0090/_0090_subsets_ii.h"
 #include "0131/_0131_palindrome_partitioning.h"
+#include "0139/_0139_word_break.h"
+#include "0140/_0140_word_break_ii.h"
 #include "1239/_1239_maximum_length_of_concatenated_string_with_unique_characters.h"
 
 
@@ -26,7 +28,9 @@ int main()
     //_0079_word_search sol;
     //_0090_subsets_ii sol;
     //_0131_palindrome_partitioning sol;
-    _1239_maximum_length_of_concatenated_string_with_unique_characters sol;
+    //_0139_word_break sol;
+    _0140_word_break_ii sol;
+    //_1239_maximum_length_of_concatenated_string_with_unique_characters sol;
 
     sol.do_test(&sol);
 }
