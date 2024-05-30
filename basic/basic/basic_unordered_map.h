@@ -31,6 +31,7 @@ void basic_unordered_map() {
     auto it0 = udmap.begin();
     cout << "begin of map, " << it0->first << ": " << it0->second << endl;
 
+    // 如何遍歷一個 unordered_map
     cout << "way 1" << endl;
     for (auto it1: udmap) {
         cout << it1.first << ": " << it1.second << endl;
@@ -48,6 +49,7 @@ void basic_unordered_map() {
         cout << it3->first << ": " << it3->second << endl;
         it3++;
     }
+    // ------------------------
 
     // map             可以用 pair<int, int> 當作 key
     // unordered_map 不可以用 pair<int, int> 當作 key

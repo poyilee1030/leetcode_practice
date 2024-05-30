@@ -140,6 +140,7 @@
     <ClInclude Include="_0338_counting_bits.h" />
     <ClInclude Include="_0371_sum_of_two_integers.h" />
     <ClInclude Include="_0989_add_to_array_form_of_integer.h" />
+    <ClInclude Include="_1442_count_triplets_that_can_form_two_arrays_of_equal_xor.h" />
     <ClInclude Include="_1470_shuffle_the_array.h" />
     <ClInclude Include="_0342_power_of_four.h" />
   </ItemGroup>
