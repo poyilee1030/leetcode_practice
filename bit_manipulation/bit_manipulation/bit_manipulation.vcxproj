@@ -130,12 +130,14 @@
     <ClCompile Include="bit_manipulation.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="utils.h" />
     <ClInclude Include="_0007_reverse_integer.h" />
     <ClInclude Include="_0067_add_binary.h" />
     <ClInclude Include="_0136_single_number.h" />
     <ClInclude Include="_0190_reverse_bits.h" />
     <ClInclude Include="_0191_number_of_1_bits.h" />
     <ClInclude Include="_0201_bitwise_and_of_numbers_range.h" />
+    <ClInclude Include="_0260_single_number_iii.h" />
     <ClInclude Include="_0268_missing_number.h" />
     <ClInclude Include="_0338_counting_bits.h" />
     <ClInclude Include="_0371_sum_of_two_integers.h" />

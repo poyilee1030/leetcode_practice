@@ -19,21 +19,22 @@ public:
 
 	void do_test(_0136_single_number* sol)
 	{
-		vector<int> nums1 = { 2, 2, 1 };
-		int ret1 = sol->singleNumber(nums1);
-		cout << ret1 << endl;
+		vector<int> nums;
+		int ret;
+
+		nums = { 2, 2, 1 };
+		ret = sol->singleNumber(nums);
+		cout << ret << endl;
 		// Output : 1
 
-
-		vector<int> nums2 = { 4, 1, 2, 1, 2 };
-		int ret2 = sol->singleNumber(nums2);
-		cout << ret2 << endl;
+		nums = { 4, 1, 2, 1, 2 };
+		ret = sol->singleNumber(nums);
+		cout << ret << endl;
 		// Output : 4
 
-
-		vector<int> nums3 = { 1 };
-		int ret3 = sol->singleNumber(nums3);
-		cout << ret3 << endl;
+		nums = { 1 };
+		ret = sol->singleNumber(nums);
+		cout << ret << endl;
 		// Output : 1
 	}
 };

@@ -7,6 +7,7 @@
 #include "_0190_reverse_bits.h"
 #include "_0191_number_of_1_bits.h"
 #include "_0201_bitwise_and_of_numbers_range.h"
+#include "_0260_single_number_iii.h"
 #include "_0268_missing_number.h"
 #include "_0338_counting_bits.h"
 #include "_0342_power_of_four.h"
@@ -24,12 +25,13 @@ int main()
     //_0190_reverse_bits sol;
     //_0191_number_of_1_bits sol;
     //_0201_bitwise_and_of_numbers_range sol;
+    _0260_single_number_iii sol;
     //_0268_missing_number sol;
     //_0338_counting_bits sol;
     //_0342_power_of_four sol;
     //_0371_sum_of_two_integers sol;
     //_0989_add_to_array_form_of_integer sol;
-    _1442_count_triplets_that_can_form_two_arrays_of_equal_xor sol;
+    //_1442_count_triplets_that_can_form_two_arrays_of_equal_xor sol;
     //_1470_shuffle_the_array sol;
 
     sol.do_test(&sol);

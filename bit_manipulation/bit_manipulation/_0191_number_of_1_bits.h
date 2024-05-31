@@ -24,24 +24,28 @@ public:
 	}
 
 	void do_test(_0191_number_of_1_bits* sol) {
-		string s1 = "00000000000000000000000000001011";
-		uint32_t n1 = convert_string_to_uint32(s1);
-		int ret1 = sol->hammingWeight(n1);
-		cout << ret1 << endl;
+		string s;
+		uint32_t n;
+		int ret;
+
+		s = "00000000000000000000000000001011";
+		n = convert_string_to_uint32(s);
+		ret = sol->hammingWeight(n);
+		cout << ret << endl;
 		// Output : 3
 		// Explanation : The input binary string 00000000000000000000000000001011 has a total of three '1' bits.
 		
-		string s2 = "00000000000000000000000010000000";
-		uint32_t n2 = convert_string_to_uint32(s2);
-		int ret2 = sol->hammingWeight(n2);
-		cout << ret2 << endl;
+		s = "00000000000000000000000010000000";
+		n = convert_string_to_uint32(s);
+		ret = sol->hammingWeight(n);
+		cout << ret << endl;
 		// Output : 1
 		// Explanation : The input binary string 00000000000000000000000010000000 has a total of one '1' bit.
 		
-		string s3 = "11111111111111111111111111111101";
-		uint32_t n3 = convert_string_to_uint32(s3);
-		int ret3 = sol->hammingWeight(n3);
-		cout << ret3 << endl;
+		s = "11111111111111111111111111111101";
+		n = convert_string_to_uint32(s);
+		ret = sol->hammingWeight(n);
+		cout << ret << endl;
 		// Output : 31
 		// Explanation : The input binary string 11111111111111111111111111111101 has a total of thirty one '1' bits.
 	}
