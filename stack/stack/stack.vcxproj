@@ -130,6 +130,7 @@
     <ClCompile Include="stack.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="_0394_decode_string.h" />
     <ClInclude Include="_0402_remove_k_digits.h" />
     <ClInclude Include="_0907_sum_of_subarray_minimums.h" />
     <ClInclude Include="_1441_build_an_array_with_stack_operations.h" />
