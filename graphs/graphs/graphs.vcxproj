@@ -131,7 +131,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="define.h" />
+    <ClInclude Include="_3249_count_the_number_of_good_nodes.h" />
     <ClInclude Include="utils.h" />
+    <ClInclude Include="_3243_shortest_distance_after_road_addition_queries_i.h" />
     <ClInclude Include="_0127_word_ladder.h" />
     <ClInclude Include="_0130_surrounded_regions_dfs.h" />
     <ClInclude Include="_0133_clone_graph.h" />

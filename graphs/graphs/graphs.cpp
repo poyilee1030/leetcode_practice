@@ -17,6 +17,8 @@
 #include "_0695_max_area_of_island_dfs.h"
 #include "_0994_rotting_oranges.h"
 #include "_1743_restore_the_array_from_adjacent_pairs.h"
+#include "_3243_shortest_distance_after_road_addition_queries_i.h"
+#include "_3249_count_the_number_of_good_nodes.h"
 
 
 int main()
@@ -28,7 +30,7 @@ int main()
     //_0207_course_schedule sol;
     //_0210_course_schedule_ii sol;
     //_0261_graph_valid_tree sol;
-    _0286_walls_and_gates sol;
+    //_0286_walls_and_gates sol;
     //_0323_number_of_connected_components_in_an_undirected_graph sol;
     //_0417_pacific_atlantic_water_flow_bfs sol;
     //_0417_pacific_atlantic_water_flow_dfs sol;
@@ -37,6 +39,8 @@ int main()
     //_0695_max_area_of_island_dfs sol;
     //_0994_rotting_oranges sol;
     //_1743_restore_the_array_from_adjacent_pairs sol;
+    _3243_shortest_distance_after_road_addition_queries_i sol;
+    //_3249_count_the_number_of_good_nodes sol;
 
     sol.do_test(&sol);
 }
