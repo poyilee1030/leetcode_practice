@@ -20,25 +20,22 @@ public:
         return 1 + max(left, right);
     }
 
-	void do_test(_0104_maximum_depth_of_binary_tree* sol)
-	{
+	void do_test(_0104_maximum_depth_of_binary_tree* sol) {
+        int res;
+
         TreeNode* t15 = new TreeNode(15);
         TreeNode* t7 = new TreeNode(7);
         TreeNode* t9 = new TreeNode(9);
         TreeNode* t20 = new TreeNode(20, t15, t7);
         TreeNode* t3 = new TreeNode(3, t9, t20);
-
-        int res = sol->maxDepth(t3);
+        res = sol->maxDepth(t3);
         cout << res << endl;
         // Output: 3
 
         TreeNode* t2 = new TreeNode(2);
         TreeNode* t1 = new TreeNode(1, NULL, t2);
-        int res2 = sol->maxDepth(t1);
-        cout << res2 << endl;
+        res = sol->maxDepth(t1);
+        cout << res << endl;
         // Output: 2
 	}
 };
-
-
-
